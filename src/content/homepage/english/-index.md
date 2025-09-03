@@ -7,7 +7,6 @@ meta_description: Nubesti: AI-powered cybersecurity platform for continuous, aut
 faq_section:
   # subtitle: "FAQ"
   # title: "Frequently **Asked Questions**"
-
   show_categories: false
   minimal_faq_layout: true
 ---
