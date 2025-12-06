@@ -54,7 +54,6 @@ web-nubesti/
 │   ├── i18n/              # Translations (en, es, fr, pt)
 │   ├── layouts/           # Page layouts
 │   │   └── components/    # Layout-specific components
-│   │       ├── analytics/ # Analytics integrations
 │   │       ├── seo/       # SEO & Schema.org
 │   │       └── global/    # Global components (Head, etc.)
 │   ├── lib/               # Utilities & helpers
@@ -63,7 +62,6 @@ web-nubesti/
 ├── scripts/               # Build & utility scripts
 ├── astro.config.mjs       # Astro configuration
 ├── tailwind.config.js     # Tailwind configuration
-├── wrangler.toml          # Cloudflare Workers config
 └── package.json           # Dependencies & scripts
 ```
 
@@ -111,13 +109,19 @@ yarn preview
 
 ### Deployment
 
-The site is deployed to **Cloudflare Pages**:
+The site is automatically deployed to **Cloudflare Pages** on every push to `main`:
 
+- **GitHub Repository**: `nubestius/nubesti-web-cloudflare-pages`
+- **Build Command**: `yarn build`
+- **Output Directory**: `dist`
+- **Framework Preset**: Astro
+
+Manual deployment (if needed):
 ```bash
-# Deploy to Cloudflare Pages
-yarn deploy:cf
+# Build the site
+yarn build
 
-# Or manually with wrangler
+# Deploy with Wrangler CLI
 npx wrangler pages deploy dist --project-name=nubesti-web
 ```
 
@@ -127,20 +131,34 @@ npx wrangler pages deploy dist --project-name=nubesti-web
 
 ## 🔒 Security Features
 
-### HTTP Headers (via `_headers`)
+### TLS/SSL Configuration
 
-- **Content-Security-Policy** - Strict CSP with nonces
-- **X-Frame-Options** - DENY (clickjacking protection)
-- **X-Content-Type-Options** - nosniff
-- **Strict-Transport-Security** - HSTS enabled
-- **Referrer-Policy** - strict-origin-when-cross-origin
-- **Permissions-Policy** - Restricted browser features
+- **TLS Version**: 1.2 minimum, 1.3 enabled
+- **SSL Mode**: Full (strict)
+- **Total TLS**: Enabled (automatic certificates for subdomains)
+
+### HTTP Security Headers (via `public/_headers`)
+
+| Header | Value |
+|--------|-------|
+| **Strict-Transport-Security** | `max-age=31536000; includeSubDomains; preload` |
+| **Content-Security-Policy** | Strict CSP (self + trusted sources) |
+| **X-Frame-Options** | `DENY` |
+| **X-Content-Type-Options** | `nosniff` |
+| **Referrer-Policy** | `strict-origin-when-cross-origin` |
+| **Permissions-Policy** | Camera, mic, geolocation disabled |
+
+### HSTS Preload
+
+✅ Submitted to [hstspreload.org](https://hstspreload.org) - Pending inclusion in browser preload lists.
 
 ### DNS & Email Security
 
-- **DMARC** - `p=quarantine` with reporting
-- **SPF** - Configured for Google Workspace & Zeptomail
-- **DKIM** - Enabled for all email services
+| Record | Configuration |
+|--------|--------------|
+| **DMARC** | `p=quarantine` with reporting |
+| **SPF** | Configured for Google Workspace & Zeptomail |
+| **DKIM** | Enabled for all email services |
 
 ## 📝 Content Management
 
@@ -213,4 +231,8 @@ Copyright © 2025 Nubesti. All Rights Reserved.
 
 <p align="center">
   Made with ❤️ by the Nubesti Team
+</p>
+
+<p align="center">
+  <sub>Last updated: December 2025</sub>
 </p>
