@@ -12,14 +12,11 @@ import VideoSchema from "@/layouts/components/seo/VideoSchema.astro";
 import ArticleSchema from "@/layouts/components/seo/ArticleSchema.astro";
 import CoreWebVitals from "@/layouts/components/seo/CoreWebVitals.astro";
 import AdvancedSEOAnalysis from "@/layouts/components/seo/AdvancedSEOAnalysis.astro";
-import GoogleAnalytics from "@/layouts/components/analytics/GoogleAnalytics.astro";
 import GoogleSearchConsole from "@/layouts/components/analytics/GoogleSearchConsole.astro";
-import GoogleTagManager from "@/layouts/components/analytics/GoogleTagManager.astro";
-import TrackingScript from "@/layouts/components/analytics/TrackingScript.astro";
-import Intercom from "@/layouts/components/analytics/Intercom.astro";
 import parseTomlToJson from "@/lib/utils/parseTomlToJson.ts";
 import theme from "@/config/theme.json";
 import JsonLD from "../widgets/JsonLD.astro";
+// Removed: GoogleAnalytics, GoogleTagManager, TrackingScript - Using Cloudflare Web Analytics only
 
 const config = parseTomlToJson("./src/config/config.toml");
 const themeColor = theme.colors.default.theme_color.primary;
@@ -49,14 +46,8 @@ const themeColor = theme.colors.default.theme_color.primary;
 -------------->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://umami.is" />
   
-  <!-- Alternate language links for SEO -->
-  <link rel="alternate" hreflang="en" href={`${config.site.base_url}/en/`} />
-  <link rel="alternate" hreflang="es" href={`${config.site.base_url}/es/`} />
-  <link rel="alternate" hreflang="fr" href={`${config.site.base_url}/fr/`} />
-  <link rel="alternate" hreflang="pt" href={`${config.site.base_url}/pt/`} />
-  <link rel="alternate" hreflang="x-default" href={config.site.base_url} />
+  <!-- Alternate language links are rendered dynamically in Seo.astro -->
   
   <!-- Enhanced sitemap links -->
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
@@ -150,27 +141,7 @@ const themeColor = theme.colors.default.theme_color.primary;
   <!-- Advanced SEO Analysis -->
   <AdvancedSEOAnalysis />
 
-  <!-- Google Tag Manager -->
-  <GoogleTagManager />
-
-  <!-- Google Analytics -->
-  <GoogleAnalytics />
-
-  <!-- Enhanced Event Tracking -->
-  <TrackingScript />
-
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    {(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "rylu9no5fo")}
-  </script>
-
-  <!-- Intercom Chat Widget -->
-  <Intercom {...Astro.props} />
+  <!-- Cloudflare Web Analytics - Injected via config.toml head.content or automatically by Cloudflare Pages -->
 
   <!------------------
     Google Fonts

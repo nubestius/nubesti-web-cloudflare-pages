@@ -1,0 +1,20 @@
+# ===========================================
+# Cloudflare Pages - Redirects
+# Nubesti Web - https://nubesti.com
+# ===========================================
+# Format: /from /to [status]
+
+# Sitemap redirect
+/sitemap.xml  /sitemap-index.xml  301
+
+# How it works → Demo redirect
+/how-it-works  /demo/  301
+/how-it-works/  /demo/  301
+
+# WWW to non-WWW (handled by Cloudflare DNS, but backup here)
+# https://www.nubesti.com/*  https://nubesti.com/:splat  301
+
+# Language-specific redirects (if needed in future)
+# /es  /es/  301
+# /fr  /fr/  301
+# /pt  /pt/  301

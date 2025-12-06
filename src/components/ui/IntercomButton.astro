@@ -105,15 +105,6 @@ const buttonClasses = `
     
     intercomButtons.forEach(button => {
       button.addEventListener('click', function() {
-        // Track security consultation requests
-        if (window.gtag) {
-          window.gtag('event', 'security_consultation_clicked', {
-            event_category: 'engagement',
-            event_label: 'intercom_chat',
-            page_location: window.location.href
-          });
-        }
-        
         // Track in Intercom
         if (window.Intercom) {
           window.Intercom('track', 'security-chat-opened', {

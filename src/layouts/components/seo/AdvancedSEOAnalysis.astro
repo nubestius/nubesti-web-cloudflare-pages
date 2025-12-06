@@ -221,17 +221,14 @@ const enableSEOAnalysis = config.analytics?.enable_seo_analysis !== false;
             timestamp: new Date().toISOString()
           };
 
-          // Send to analytics if available
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'seo_analysis', {
-              event_category: 'SEO Performance',
+          // Log SEO metrics for debugging (Cloudflare Web Analytics handles page analytics)
+          if (typeof console !== 'undefined' && console.debug) {
+            console.debug('SEO Analysis:', {
               seo_score: seoScore,
               page_url: window.location.pathname,
               title_length: this.metrics.seo.metaTags.title.length,
               description_length: this.metrics.seo.metaTags.description.length,
-              h1_count: this.metrics.seo.headings.h1.count,
-              images_without_alt: this.metrics.seo.images.withoutAlt,
-              structured_data_count: this.metrics.seo.structuredData.count
+              h1_count: this.metrics.seo.headings.h1.count
             });
           }
 
@@ -277,30 +274,12 @@ const enableSEOAnalysis = config.analytics?.enable_seo_analysis !== false;
           const href = link.getAttribute('href');
           
           if (href && href.startsWith('http') && !href.includes(window.location.hostname)) {
-            // Track external link clicks
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'click', {
-                event_category: 'External Link',
-                event_label: href,
-                transport_type: 'beacon'
-              });
+            // Log external link clicks for debugging
+            if (typeof console !== 'undefined' && console.debug) {
+              console.debug('External link clicked:', href);
             }
           }
         }
-      });
-
-      // Monitor for search queries (if search functionality exists)
-      const searchInputs = document.querySelectorAll('input[type="search"], input[name*="search"], input[placeholder*="search"]');
-      searchInputs.forEach(input => {
-        input.addEventListener('submit', function(e) {
-          const query = this.value.trim();
-          if (query && typeof gtag !== 'undefined') {
-            gtag('event', 'search', {
-              search_term: query,
-              event_category: 'Site Search'
-            });
-          }
-        });
       });
 
       // Monitor scroll depth for engagement metrics
@@ -312,13 +291,7 @@ const enableSEOAnalysis = config.analytics?.enable_seo_analysis !== false;
         
         if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
           maxScroll = scrollPercent;
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'scroll', {
-              event_category: 'Engagement',
-              event_label: scrollPercent + '%',
-              value: scrollPercent
-            });
-          }
+          // Scroll depth is tracked automatically by Cloudflare Web Analytics
         }
       });
     </script>

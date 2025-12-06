@@ -53,10 +53,7 @@ export default defineConfig({
   site: config.site.base_url ? config.site.base_url : "http://examplesite.com",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: {
-    experimentalLayout: "responsive",
-  },
-  experimental: {
-    responsiveImages: true,
+    // Responsive images are now stable in Astro 5.16+
   },
   i18n: {
     locales: locales,

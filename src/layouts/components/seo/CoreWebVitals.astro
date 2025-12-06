@@ -95,15 +95,9 @@ const enableWebVitals = config.analytics?.enable_web_vitals !== false;
       function sendToAnalytics(metric) {
         const body = JSON.stringify(metric);
         
-        // Send to Google Analytics if available
-        if (typeof gtag !== 'undefined') {
-          gtag('event', metric.name, {
-            event_category: 'Web Vitals',
-            event_label: metric.id,
-            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            non_interaction: true,
-            custom_map: { metric_value: 'value' }
-          });
+        // Log to console for debugging (Cloudflare Web Analytics handles this automatically)
+        if (typeof console !== 'undefined' && console.debug) {
+          console.debug('Web Vital:', metric.name, metric.value);
         }
 
         // Send to custom endpoint for detailed analysis
@@ -145,15 +139,9 @@ const enableWebVitals = config.analytics?.enable_web_vitals !== false;
           timestamp: Date.now()
         };
 
-        // Send RUM data for SEO analysis
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'page_timing', {
-            event_category: 'SEO Performance',
-            dns_time: metrics.dns,
-            tcp_time: metrics.tcp,
-            response_time: metrics.response,
-            dom_time: metrics.dom
-          });
+        // Send RUM data for SEO analysis (logged for debugging)
+        if (typeof console !== 'undefined' && console.debug) {
+          console.debug('Page Timing:', metrics);
         }
       });
     </script>
@@ -169,8 +157,6 @@ const enableWebVitals = config.analytics?.enable_web_vitals !== false;
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
     
     <!-- Resource hints for improved loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

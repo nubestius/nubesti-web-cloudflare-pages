@@ -1,6 +1,6 @@
 ---
-title: ""
-meta_description: Nubesti: AI-powered cybersecurity platform for continuous, autonomous vulnerability detection and remediation.
+title: "Nubesti - AI Red Team"
+meta_description: Nubesti AI-powered cybersecurity platform for continuous, autonomous vulnerability detection and remediation.
 
 # Override Default Content of `/faq/-index.md`
 # Uncomment key values that you want to override

@@ -3,8 +3,8 @@ import {
   getLocaleUrlCTM,
   supportedLanguages,
 } from "@/lib/utils/languageParser.ts";
-import { plainify, removeWhitespace } from "@/lib/utils/textConverter";
 import parseTomlToJson from "@/lib/utils/parseTomlToJson";
+import { plainify, removeWhitespace } from "@/lib/utils/textConverter";
 
 // Load the configuration
 const config = parseTomlToJson("./src/config/config.toml");
@@ -53,10 +53,16 @@ if (
   supportedLanguages.forEach((lang) => {
     alternateTags.push({
       hreflang: lang.languageCode,
-      href: getLocaleUrlCTM(Astro.url.href, lang.languageCode),
+      href: getLocaleUrlCTM(
+        new URL(Astro.url.href, Astro.site).href,
+        lang.languageCode
+      ),
     });
   });
 }
+
+// Add x-default pointing to base URL without locale
+const xDefault = new URL(Astro.url.pathname, config.site.base_url).href;
 ---
 
 {title && <title>{removeWhitespace(title)}</title>}
@@ -75,3 +81,4 @@ if (
       <link rel="alternate" hreflang={tag.hreflang} href={tag.href} />
     ))
 }
+{xDefault && <link rel="alternate" hreflang="x-default" href={xDefault} />}

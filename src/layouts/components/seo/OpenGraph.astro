@@ -1,6 +1,7 @@
 ---
 import { absoluteUrl } from "@/lib/utils/absoluteUrl";
 import parseTomlToJson from "@/lib/utils/parseTomlToJson";
+import { supportedLanguages } from "@/lib/utils/languageParser";
 import { plainify, removeWhitespace } from "@/lib/utils/textConverter";
 
 // Load the configuration
@@ -36,6 +37,16 @@ description = removeWhitespace(description);
 
 // Generate the full URL for the current page
 const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const localeMap: Record<string, string> = {
+  en: "en_US",
+  es: "es_ES",
+  fr: "fr_FR",
+  pt: "pt_PT",
+};
+const ogLocaleAlternates: string[] = (supportedLanguages || [])
+  .map((l) => l.languageCode)
+  .map((code) => localeMap[code] || code)
+  .filter((loc) => loc && loc !== config.opengraph.og_locale);
 
 // Add tagline & separator to title
 if (!disable_tagline) {
@@ -68,6 +79,11 @@ if (!disable_tagline) {
 {og_type && <meta property="og:type" content={og_type} />}
 {og_locale && <meta property="og:locale" content={og_locale} />}
 {pageUrl && <meta property="og:url" content={pageUrl} />}
+{
+  ogLocaleAlternates.map((code) => (
+    <meta property="og:locale:alternate" content={code} />
+  ))
+}
 
 <!------------------------
     Twitter Open Graph

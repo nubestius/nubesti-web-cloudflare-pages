@@ -156,26 +156,21 @@
   twitter      = "" # Twitter handle for Twitter Card meta tags
   twitter_card = "summary_large_image" # Type of Twitter Card to use in social sharing
 
-# Google Analytics & Search Console Configuration
+# Analytics Configuration (Cloudflare Web Analytics Only)
 # -----------------------------------------------------------------------------------------------------------------------------------
 [analytics]
-  google_analytics_id = "G-493259096" # Google Analytics 4 Measurement ID
-  google_tag_manager_id = "GTM-WSTG96J5" # Google Tag Manager ID
+  google_analytics_id = "" # Disabled - Using Cloudflare Web Analytics
+  google_tag_manager_id = "" # Disabled - Using Cloudflare Web Analytics
   google_site_verification = "" # Verification by DNS - backup HTML verification code (optional since you verified via DNS)
-  enable_analytics = true # Enable/disable analytics tracking
-  enable_tag_manager = true # Enable/disable Google Tag Manager
+  enable_analytics = false # Disabled - Using Cloudflare Web Analytics
+  enable_tag_manager = false # Disabled - Using Cloudflare Web Analytics
   enable_search_console = true # Enable/disable Search Console optimizations
   enable_web_vitals = true # Enable/disable Core Web Vitals monitoring
   enable_seo_analysis = true # Enable/disable real-time SEO analysis
-  
-  # Intercom Configuration
-  intercom_app_id = "ta88dezl" # Your Intercom App ID
-  enable_intercom = true # Enable/disable Intercom chat widget
 
 # [head] (Add custom scripts, stylesheets, and meta tags to be rendered in the <head> section of the page)
 # -----------------------------------------------------------------------------------------------------------------------------------
 [head]
   content = """
-  <!-- You can easily add this type of tracking code by updating the `config.toml` file -->
-  <script defer src="/umami.is.js" data-website-id=""></script>
+  <!-- Cloudflare Web Analytics is automatically injected by Cloudflare Pages -->
   """
