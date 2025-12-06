@@ -1,7 +1,0 @@
-# Cloudflare Pages Configuration
-# Note: For Pages connected to GitHub, the build is handled by Cloudflare
-# This file is only used for local development and CLI deploys
-name = "nubesti-web"
-compatibility_date = "2025-12-05"
-
-# For CLI deploys only: npx wrangler pages deploy dist --project-name=nubesti-web
