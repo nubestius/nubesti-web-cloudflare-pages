@@ -1,7 +1,0 @@
-# Cloudflare Pages Configuration
-# https://developers.cloudflare.com/pages/functions/wrangler-configuration/
-name = "nubesti-web"
-compatibility_date = "2025-12-05"
-pages_build_output_dir = "dist"
-
-[env.production]
