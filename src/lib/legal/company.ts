@@ -1,6 +1,6 @@
 import type { LegalCompany } from "./types";
 
-export const LEGAL_UPDATED = "2026-09-20";
+export const LEGAL_UPDATED = "2026-09-21";
 
 export const legalCompany: LegalCompany = {
   name: "Nubesti",
@@ -16,7 +16,6 @@ export const legalCompany: LegalCompany = {
   privacyEmail: "privacy@nubesti.com",
   securityEmail: "security@nubesti.com",
   dpoEmail: "dpo@nubesti.com",
-  phone: "+57 320 545 1915",
   website: "https://nubesti.com",
   portal: "https://app.nubesti.com",
 };

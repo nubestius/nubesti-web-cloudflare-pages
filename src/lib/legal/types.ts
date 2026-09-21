@@ -1,16 +1,21 @@
 export const LEGAL_SLUGS = [
   "terms",
+  "billing",
+  "refunds",
+  "sla",
+  "acceptable-use",
+  "engagement",
+  "authorization",
+  "kyc",
+  "ai-policy",
+  "export-controls",
   "privacy",
   "cookies",
-  "acceptable-use",
-  "refunds",
-  "dmca",
-  "sla",
   "dpa",
   "subprocessors",
   "security",
-  "billing",
-  "engagement",
+  "vulnerability-disclosure",
+  "dmca",
   "accessibility",
   "ethics",
   "imprint",
@@ -18,12 +23,41 @@ export const LEGAL_SLUGS = [
 
 export type LegalSlug = (typeof LEGAL_SLUGS)[number];
 
+export const LEGAL_GROUP_IDS = [
+  "commercial",
+  "testing",
+  "privacy",
+  "trust",
+  "company",
+] as const;
+
+export type LegalGroupId = (typeof LEGAL_GROUP_IDS)[number];
+
+export const LEGAL_GROUPS: { id: LegalGroupId; slugs: LegalSlug[] }[] = [
+  { id: "commercial", slugs: ["terms", "billing", "refunds", "sla"] },
+  {
+    id: "testing",
+    slugs: [
+      "acceptable-use",
+      "engagement",
+      "authorization",
+      "kyc",
+      "ai-policy",
+      "export-controls",
+    ],
+  },
+  { id: "privacy", slugs: ["privacy", "cookies", "dpa", "subprocessors"] },
+  { id: "trust", slugs: ["security", "vulnerability-disclosure"] },
+  { id: "company", slugs: ["dmca", "accessibility", "ethics", "imprint"] },
+];
+
 export interface LegalDocument {
   slug: LegalSlug;
   title: string;
   summary: string;
   meta_description: string;
   body: string;
+  updated?: string;
 }
 
 export interface LegalCompany {
@@ -36,7 +70,6 @@ export interface LegalCompany {
   privacyEmail: string;
   securityEmail: string;
   dpoEmail: string;
-  phone: string;
   website: string;
   portal: string;
 }
@@ -51,4 +84,6 @@ export interface LegalHubCopy {
   back: string;
   home: string;
   breadcrumb: string;
+  print: string;
+  groups: Record<LegalGroupId, string>;
 }

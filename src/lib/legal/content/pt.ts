@@ -40,17 +40,19 @@ Deve fornecer informação exata e mantê-la atualizada. É responsável pelas c
 
 Se usar os serviços em nome de uma organização, declara ter autoridade para vinculá-la e autorizar os testes dos sistemas indicados.
 
+**O KYC é obrigatório e pago.** Deve concluir a verificação de identidade e da empresa e pagar a taxa de KYC / verificação antes de ativarmos lugares pagos ou permitirmos lançar testes. Ver a [Política de KYC e verificação](/legal/kyc/).
+
 ## 4. Autorização para testar
 
-Só pode usar a Nubesti para testar sistemas de que é dono ou para os quais tem autorização escrita explícita. É o único responsável por obter essa autorização, definir o âmbito e cumprir a lei.
+Só pode usar a Nubesti para testar sistemas de que é dono ou para os quais tem autorização escrita explícita. É o único responsável por obter essa autorização, definir o âmbito e cumprir a lei. Use a [Carta de autorização](/legal/authorization/).
 
 Testes, scans ou exploração não autorizados de sistemas de terceiros são proibidos e podem levar a suspensão imediata e ação legal. Veja a [Política de uso aceitável](/legal/acceptable-use/) e as [Regras de engagement](/legal/engagement/).
 
 ## 5. Encomendas, faturação e renovações
 
-Os planos pagos são vendidos por assinatura conforme o checkout ou o pedido. Os preços públicos atuais começam em 690 USD / mês (Starter) e 1.500 USD / mês (Professional). Enterprise é sob consulta. Pode haver teste grátis de 14 dias.
+Os planos pagos são vendidos por assinatura conforme o checkout ou o pedido. Os preços públicos atuais começam em 690 USD / mês (Starter) e 1.500 USD / mês (Professional). Enterprise é sob consulta. Pode haver teste grátis de 14 dias. As taxas de KYC / verificação cobram-se além do plano e em geral não são reembolsáveis.
 
-Salvo cancelamento segundo a [Política de reembolsos e cancelamento](/legal/refunds/) e [Faturação e renovações](/legal/billing/), os planos podem renovar-se à tarifa então vigente. Você autoriza a Nubesti e os processadores de pagamento a debitar o método registado.
+Salvo cancelamento segundo a [Política de reembolsos e cancelamento](/legal/refunds/) e [Faturação e renovações](/legal/billing/), os planos podem renovar-se à tarifa então vigente. Você autoriza a Nubesti e os processadores de pagamento a debitar o método registado por renovações, taxas KYC e montantes não contestados.
 
 ## 6. Uso aceitável
 
@@ -108,11 +110,22 @@ Leis do Estado de Delaware, EUA, com reserva de proteções imperativas de consu
 
 Negociação de boa-fé durante 30 dias após aviso a [legal@nubesti.com](mailto:legal@nubesti.com) antes de litigar.
 
-## 19. Contacto
+## 19. Verificação de identidade (KYC)
+
+O acesso pago e o lançamento de testes exigem KYC aprovado. Deve pagar a taxa de KYC / verificação indicada no checkout ou no pedido. Essa taxa soma-se à subscrição e em geral não é reembolsável. Podemos recusar ou congelar o serviço até à aprovação. Detalhes: [Política de KYC e verificação](/legal/kyc/).
+
+## 20. Inteligência artificial
+
+A plataforma usa análise automática e assistida por IA. Os achados não garantem exaustividade. Não usamos os seus achados de cliente para treinar modelos de fundação públicos. Ver a [Política de uso de IA](/legal/ai-policy/).
+
+## 21. Exportação e sanções
+
+Não pode usar os serviços se for uma pessoa sancionada ou estiver numa jurisdição sob sanção integral. Ver [Controlos de exportação e sanções](/legal/export-controls/).
+
+## 22. Contacto
 
 [legal@nubesti.com](mailto:legal@nubesti.com)  
-Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, EUA  
-Telefone: +57 320 545 1915`,
+Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, EUA`
   },
   {
     slug: "privacy",
@@ -177,7 +190,7 @@ Podemos publicar uma versão atualizada.
 
 ## 13. Contacto
 
-Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, EUA · +57 320 545 1915`,
+Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, EUA`,
   },
   {
     slug: "cookies",
@@ -256,7 +269,7 @@ Portal ou [legal@nubesti.com](mailto:legal@nubesti.com) antes da renovação.
 
 ## 3. Reembolsos
 
-Salvo lei ou pedido em contrário, períodos mensais já iniciados não são reembolsáveis; anuais só pro-rata se acordarmos por escrito ou retirarmos o serviço.
+Salvo lei ou pedido em contrário, períodos mensais já iniciados não são reembolsáveis; anuais só pro-rata se acordarmos por escrito ou retirarmos o serviço. **As taxas de KYC / verificação não são reembolsáveis**, mesmo se o KYC for recusado ou cancelar antes dos testes.
 
 ## 4. Créditos SLA
 
@@ -274,7 +287,7 @@ Problemas de disponibilidade seguem o [SLA](/legal/sla/).`,
 ## 1. Agente
 
 Copyright Agent, Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, EUA  
-[legal@nubesti.com](mailto:legal@nubesti.com) · +57 320 545 1915
+[legal@nubesti.com](mailto:legal@nubesti.com)
 
 ## 2. Aviso
 
@@ -361,13 +374,13 @@ Notificação sem atraso indevido. Apagamento de produção em 60 dias após o t
 
 Cloudflare, Inc. — hosting Pages, CDN, DNS, WAF, TLS e analítica web — EUA e edge global.
 
-## 2. Comunicações
+## 2. Comunicações e CRM
 
-Formsubmit, Mailchimp (newsletter opt-in), Intercom (se ativo) — EUA.
+HubSpot (demos), Formsubmit, Mailchimp (newsletter opt-in), Intercom (se ativo) — EUA.
 
-## 3. Pagamentos
+## 3. Pagamentos e KYC
 
-O processador do checkout trata dados de cartão. A Nubesti não guarda números completos.
+O processador do checkout trata cartões, incluindo **taxas de KYC / verificação**. A Nubesti não guarda números completos. Um prestador KYC / sanções pode tratar documentos de identidade no onboarding.
 
 ## 4. Contacto
 
@@ -396,7 +409,7 @@ Desenvolvimento seguro, papéis, logs, separação site / app / alvos.
 
 ## 4. Divulgação
 
-[security@nubesti.com](mailto:security@nubesti.com) — confirmação em 24 h, avaliação inicial em 48 h. Safe harbor para investigação de boa-fé. Fora de âmbito: DoS, ataques físicos, engenharia social da equipa.
+Reporte falhas nos **sistemas Nubesti** pela [Política de divulgação de vulnerabilidades](/legal/vulnerability-disclosure/) e [security@nubesti.com](mailto:security@nubesti.com). Confirmação em 24 h. Ficheiro canónico: [/.well-known/security.txt](https://nubesti.com/.well-known/security.txt).
 
 ## 5. Contacto
 
@@ -417,7 +430,7 @@ Públicos em **USD**: a partir de 690 USD / mês (Starter) e 1.500 USD / mês (P
 
 ## 2. Cobrança
 
-Assinaturas pré-pagas. Cartões tratados pelo processador do checkout.
+Assinaturas pré-pagas **mais taxas KYC / de verificação obrigatórias** (em geral não reembolsáveis — [KYC](/legal/kyc/)). Cartões tratados pelo processador do checkout.
 
 ## 3. Renovações
 
@@ -450,7 +463,7 @@ Identificar vulnerabilidades, não causar quedas nem testar fora de âmbito.
 
 ## 2. Autorização
 
-Propriedade ou autorização escrita; contactos de paragem; aviso a cloud/ISP quando necessário.
+[KYC](/legal/kyc/) aprovado **e pago**; propriedade ou [autorização escrita](/legal/authorization/); contactos de paragem; aviso a cloud/ISP quando necessário. Sem lançamento sem KYC.
 
 ## 3. Fora de âmbito por defeito
 
@@ -537,7 +550,6 @@ Registo, investigação proporcional, sem retaliação por denúncia de boa-fé.
 ## 3. Contacto
 
 [legal@nubesti.com](mailto:legal@nubesti.com) · [privacy@nubesti.com](mailto:privacy@nubesti.com) · [dpo@nubesti.com](mailto:dpo@nubesti.com) · [security@nubesti.com](mailto:security@nubesti.com)  
-Telefone: +57 320 545 1915  
 [https://nubesti.com](https://nubesti.com) · [https://app.nubesti.com](https://app.nubesti.com)
 
 ## 4. Atividade

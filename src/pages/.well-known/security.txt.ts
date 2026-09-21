@@ -4,18 +4,11 @@ const getSecurityTxt = () => `# Security Policy for Nubesti
 # https://securitytxt.org/
 
 Contact: mailto:security@nubesti.com
-Contact: https://nubesti.com/contact/
-Expires: 2026-12-31T23:59:59.000Z
-Encryption: https://nubesti.com/pgp-key.txt
-Acknowledgments: https://nubesti.com/security/acknowledgments
-Policy: https://nubesti.com/security/policy
-Hiring: https://nubesti.com/careers/security
-
-# Preferred Languages
-Preferred-Languages: en, es, fr
-
-# Canonical URL
+Expires: 2027-09-21T23:59:59.000Z
+Policy: https://nubesti.com/legal/vulnerability-disclosure/
+Acknowledgments: https://nubesti.com/legal/vulnerability-disclosure/
 Canonical: https://nubesti.com/.well-known/security.txt
+Preferred-Languages: en, es, fr, pt
 `;
 
 export const GET: APIRoute = () => {

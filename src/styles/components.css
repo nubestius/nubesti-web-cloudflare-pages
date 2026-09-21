@@ -471,3 +471,19 @@ footer {
 .legal-prose table {
   @apply text-sm;
 }
+
+@media print {
+  .header,
+  .footer,
+  [data-legal-print],
+  .legal-print-btn {
+    display: none !important;
+  }
+
+  .legal-document,
+  .legal-hub {
+    padding-top: 0;
+    color: #111;
+    background: #fff;
+  }
+}

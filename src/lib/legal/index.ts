@@ -1,10 +1,19 @@
+import { extraLegalDocuments as enExtra } from "./content/en-extra";
+import { extraLegalDocuments as esExtra } from "./content/es-extra";
+import { extraLegalDocuments as frExtra } from "./content/fr-extra";
+import { extraLegalDocuments as ptExtra } from "./content/pt-extra";
 import { legalDocuments as en } from "./content/en";
 import { legalDocuments as es } from "./content/es";
 import { legalDocuments as fr } from "./content/fr";
 import { legalDocuments as pt } from "./content/pt";
 import { LEGAL_SLUGS, type LegalDocument, type LegalSlug } from "./types";
 
-const catalogs: Record<string, LegalDocument[]> = { en, es, fr, pt };
+const catalogs: Record<string, LegalDocument[]> = {
+  en: [...en, ...enExtra],
+  es: [...es, ...esExtra],
+  fr: [...fr, ...frExtra],
+  pt: [...pt, ...ptExtra],
+};
 
 export function getLegalCatalog(locale?: string): LegalDocument[] {
   const docs = catalogs[locale || "en"] || catalogs.en;
@@ -30,7 +39,7 @@ export function isLegalSlug(slug: string): slug is LegalSlug {
 
 export { LEGAL_SLUGS } from "./types";
 export { LEGAL_UPDATED, legalCompany } from "./company";
-export { getLegalHubCopy } from "./hub";
+export { getLegalHubCopy, groupLegalDocuments } from "./hub";
 export {
   extractLegalToc,
   formatLegalDate,

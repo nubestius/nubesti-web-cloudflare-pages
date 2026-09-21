@@ -40,17 +40,19 @@ You must provide accurate account information and keep it updated. You are respo
 
 If you use the services on behalf of an organization, you represent that you have authority to bind that organization and to authorize testing of the systems you designate.
 
+**KYC is mandatory and paid.** You must complete identity and company verification and pay the KYC / verification fee before we activate paid seats or allow tests to launch. See the [KYC & Verification Policy](/legal/kyc/).
+
 ## 4. Authorization to test
 
-You may use Nubesti only to test systems you own or for which you have explicit written authorization. You are solely responsible for obtaining that authorization, defining scope, and complying with applicable law.
+You may use Nubesti only to test systems you own or for which you have explicit written authorization. You are solely responsible for obtaining that authorization, defining scope, and complying with applicable law. Use the [Authorization Letter](/legal/authorization/).
 
 Unauthorized testing, scanning, or exploitation of third-party systems is prohibited and may result in immediate suspension and legal action. See our [Acceptable Use Policy](/legal/acceptable-use/) and [Rules of Engagement](/legal/engagement/).
 
 ## 5. Orders, billing, and renewals
 
-Paid plans are sold on a subscription basis as stated at checkout or in an order form. Current public pricing starts at USD 690 per month for Starter and USD 1,500 per month for Professional. Enterprise pricing is custom. A 14-day free trial may be offered on eligible plans.
+Paid plans are sold on a subscription basis as stated at checkout or in an order form. Current public pricing starts at USD 690 per month for Starter and USD 1,500 per month for Professional. Enterprise pricing is custom. A 14-day free trial may be offered on eligible plans. KYC / verification fees are charged in addition to plan fees and are generally non-refundable.
 
-Unless canceled according to the [Refund & Cancellation Policy](/legal/refunds/) and [Billing & Renewals](/legal/billing/), paid plans may renew for a successive term at the then-current rate. You authorize Nubesti and its payment processors to charge the payment method on file for renewals and undisputed amounts owed.
+Unless canceled according to the [Refund & Cancellation Policy](/legal/refunds/) and [Billing & Renewals](/legal/billing/), paid plans may renew for a successive term at the then-current rate. You authorize Nubesti and its payment processors to charge the payment method on file for renewals, KYC fees, and undisputed amounts owed.
 
 Failed payments may result in suspension after notice. Reactivation may require payment of outstanding balances.
 
@@ -118,11 +120,22 @@ These Terms are governed by the laws of the State of Delaware, USA, without rega
 
 Before filing a claim, the parties will attempt good-faith negotiation for 30 days after written notice to [legal@nubesti.com](mailto:legal@nubesti.com).
 
-## 19. Contact
+## 19. Identity verification (KYC)
+
+Paid access and test launches require successful KYC. You must pay the KYC / verification fee shown at checkout or in your order form. That fee is in addition to subscription charges and is generally non-refundable. We may refuse or freeze service until verification is approved. Details: [KYC & Verification Policy](/legal/kyc/).
+
+## 20. Artificial intelligence
+
+The platform uses automated and AI-assisted analysis. Findings are not a guarantee of completeness. We do not use your customer findings to train public foundation models. See the [AI Use Policy](/legal/ai-policy/).
+
+## 21. Export controls and sanctions
+
+You may not use the services if you are a sanctioned person or located in a comprehensively sanctioned jurisdiction. See [Export Controls & Sanctions](/legal/export-controls/).
+
+## 22. Contact
 
 Questions about these Terms: [legal@nubesti.com](mailto:legal@nubesti.com)  
-Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, USA  
-Phone: +57 320 545 1915`,
+Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, USA`
   },
   {
     slug: "privacy",
@@ -149,8 +162,9 @@ Nubesti LLC, 1111B S Governors Ave STE 23840, Dover, DE 19904, USA
 We may collect:
 
 - **Identity and contact data:** name, role, company, email, phone, billing address
+- **KYC and verification data:** government ID, company formation documents, beneficial-ownership or control information, proof of authority to test, and screening results
 - **Account data:** login identifiers, preferences, teammates you invite
-- **Transaction data:** plan, invoices, payment status (card details are handled by the payment processor)
+- **Transaction data:** plan, invoices, KYC fees, payment status (card details are handled by the payment processor)
 - **Technical data:** IP address, browser, device, approximate location, logs
 - **Usage data:** pages viewed, features used, diagnostic events
 - **Security-testing data:** in-scope assets, findings, evidence, and reports you generate or upload
@@ -164,8 +178,9 @@ We use personal data to:
 
 - Provide, secure, and improve the website and platform
 - Create and administer accounts
+- Complete mandatory KYC and sanctions screening
 - Run authorized security tests and deliver reports
-- Process payments, trials, renewals, and tax invoices
+- Process payments, KYC fees, trials, renewals, and tax invoices
 - Respond to demos, sales, and support requests
 - Detect abuse, fraud, and unauthorized testing
 - Comply with law and enforce our agreements
@@ -210,7 +225,13 @@ Depending on your location, you may have rights to access, correct, delete, rest
 
 California residents may have CCPA/CPRA rights, including to know, delete, and correct personal information and to opt out of sharing for cross-context behavioral advertising. We do not sell personal information.
 
-To exercise rights, email [privacy@nubesti.com](mailto:privacy@nubesti.com). You may also lodge a complaint with your supervisory authority, including an EU DPA, Colombia’s SIC, or the US FTC / Delaware Attorney General.
+To exercise rights, email [privacy@nubesti.com](mailto:privacy@nubesti.com) with:
+
+- Your name, company, and the email on the account
+- The right you want to exercise (access, correction, deletion, portability, restriction, objection, or CCPA “do not sell/share”)
+- Enough detail for us to find your records
+
+We may need to verify your identity—including against KYC records—before we act. We aim to respond within 30 days, or sooner if local law requires it. You may also lodge a complaint with your supervisory authority, including an EU DPA, Colombia’s SIC, or the US FTC / Delaware Attorney General.
 
 ## 9. Cookies
 
@@ -232,8 +253,7 @@ We may update this policy by posting a new version with a revised date. Material
 
 Nubesti LLC  
 1111B S Governors Ave STE 23840, Dover, DE 19904, USA  
-[privacy@nubesti.com](mailto:privacy@nubesti.com) · [dpo@nubesti.com](mailto:dpo@nubesti.com) · [legal@nubesti.com](mailto:legal@nubesti.com)  
-Phone: +57 320 545 1915`,
+[privacy@nubesti.com](mailto:privacy@nubesti.com) · [dpo@nubesti.com](mailto:dpo@nubesti.com) · [legal@nubesti.com](mailto:legal@nubesti.com)`,
   },
   {
     slug: "cookies",
@@ -375,6 +395,7 @@ Unless required by law or expressly stated in an order form:
 
 - Monthly subscriptions are generally non-refundable once a paid period has started
 - Annual commitments may be refunded pro-rata only if we agree in writing or if we withdraw the service
+- **KYC / identity-verification fees are always non-refundable**, including if KYC is declined or you cancel before tests launch
 - Professional services and custom enterprise work are non-refundable once work has started, except for unused prepaid unused hours we agree to credit
 - Chargebacks initiated without first contacting us may result in account suspension
 
@@ -415,8 +436,7 @@ Copyright Agent
 Nubesti LLC  
 1111B S Governors Ave STE 23840  
 Dover, DE 19904, USA  
-Email: [legal@nubesti.com](mailto:legal@nubesti.com)  
-Phone: +57 320 545 1915
+Email: [legal@nubesti.com](mailto:legal@nubesti.com)
 
 ## 2. What to include in a notice
 
@@ -612,17 +632,20 @@ We require subprocessors to protect personal data and to use it only to provide 
 | --- | --- | --- |
 | Cloudflare, Inc. | Website and platform hosting on Cloudflare Pages, CDN, DNS, WAF, TLS, and privacy-oriented web analytics | United States and Cloudflare’s global edge |
 
-## 2. Communications and forms
+## 2. Communications, CRM, and forms
 
 | Provider | Role | Primary location |
 | --- | --- | --- |
+| HubSpot, Inc. | Demo booking (HubSpot Meetings) and related sales/CRM records when you request a meeting | United States |
 | Formsubmit | Delivery of marketing-site contact form submissions | United States |
 | The Rocket Science Group (Mailchimp) | Newsletter subscription if you opt in via the footer form | United States |
 | Intercom, Inc. | Optional in-product or site messaging when enabled | United States |
 
-## 3. Payments
+## 3. Payments and KYC
 
-Paid plans are billed through the payment processor shown at checkout. That processor is an independent controller or processor of payment-card data. Nubesti does not store full card numbers.
+Paid plans, taxes, and **KYC / verification fees** are billed through the payment processor shown at checkout. That processor is an independent controller or processor of payment-card data. Nubesti does not store full card numbers.
+
+Identity documents and company checks may be processed by a third-party KYC / sanctions-screening provider we enable during onboarding. That provider uses the data only to verify you for Nubesti. We will name the live vendor in the portal checkout flow when it is enabled.
 
 ## 4. Professional advisors
 
@@ -671,17 +694,7 @@ We maintain backups of platform configuration and customer workspace data suffic
 
 ## 6. Vulnerability disclosure
 
-If you believe you found a vulnerability in Nubesti systems (not in a customer target), email [security@nubesti.com](mailto:security@nubesti.com). Please include:
-
-- A description and impact
-- Steps to reproduce
-- Any screenshots or proof of concept that does not destroy data
-
-We aim to acknowledge within 24 hours and provide an initial assessment within 48 hours.
-
-**Safe harbor.** We will not pursue legal action against researchers who act in good faith, avoid privacy violations and service degradation, and give us a reasonable chance to fix issues before public disclosure.
-
-**Out of scope.** Physical attacks, denial-of-service against production, spam, and social engineering of staff are not authorized.
+Report issues in **Nubesti systems** (not customer targets) under the dedicated [Vulnerability Disclosure Policy](/legal/vulnerability-disclosure/). Email [security@nubesti.com](mailto:security@nubesti.com). We aim to acknowledge within 24 hours. The canonical researcher file is [/.well-known/security.txt](https://nubesti.com/.well-known/security.txt).
 
 ## 7. Compliance posture
 
@@ -711,6 +724,7 @@ Annual commitments may include a discount. The price that applies is the one sho
 Subscriptions are prepaid for the term you select (monthly or annual unless an order form says otherwise). Invoices may include:
 
 - Platform subscription fees
+- **KYC / identity-verification fees** (mandatory, prepaid, generally non-refundable — see [KYC](/legal/kyc/))
 - Add-ons (compliance packs, dedicated support, extra capacity)
 - Professional services or onboarding packages
 - Applicable taxes
@@ -762,11 +776,12 @@ The purpose of an engagement is to identify vulnerabilities and improve your sec
 
 Before testing starts, you confirm that:
 
-- You own the targets or have written authorization from the owner
+- [KYC](/legal/kyc/) is approved **and paid** for the organization and the users who will launch tests
+- You own the targets or have written authorization from the owner (use the [Authorization Letter](/legal/authorization/))
 - The named contacts can halt or resize the test
 - Any third-party providers (cloud, ISP, MSSP) that require notice have been notified when needed
 
-We may pause work if authorization is unclear.
+We will not launch tests, and we may pause work, if KYC or authorization is unclear.
 
 ## 3. Scope
 
@@ -942,7 +957,6 @@ United States
 - Privacy: [privacy@nubesti.com](mailto:privacy@nubesti.com)
 - Data protection officer: [dpo@nubesti.com](mailto:dpo@nubesti.com)
 - Security: [security@nubesti.com](mailto:security@nubesti.com)
-- Phone: +57 320 545 1915
 - Website: [https://nubesti.com](https://nubesti.com)
 - Application: [https://app.nubesti.com](https://app.nubesti.com)
 

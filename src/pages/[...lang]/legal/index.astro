@@ -6,6 +6,7 @@ import {
   formatLegalDate,
   getLegalCatalog,
   getLegalHubCopy,
+  groupLegalDocuments,
   legalCompany,
 } from "@/lib/legal";
 
@@ -16,7 +17,7 @@ export function getStaticPaths() {
 const locale = Astro.currentLocale || "en";
 const copy = getLegalHubCopy(locale);
 const documents = getLegalCatalog(locale);
-const updated = formatLegalDate(LEGAL_UPDATED, locale);
+const groups = groupLegalDocuments(documents, locale);
 const homeUrl = getLocaleUrlCTM("/", locale);
 const legalUrl = getLocaleUrlCTM("/legal/", locale);
 ---
@@ -66,27 +67,39 @@ const legalUrl = getLocaleUrlCTM("/legal/", locale);
         </a>
       </div>
 
-      <div class="mt-16 grid gap-5 md:grid-cols-2">
+      <div class="mt-16 space-y-16">
         {
-          documents.map((doc) => (
-            <a
-              href={getLocaleUrlCTM(`/legal/${doc.slug}/`, locale)}
-              class="legal-card group border-white/10 bg-white/[0.035] hover:border-primary/40 hover:bg-white/[0.055] relative flex min-h-[220px] flex-col rounded-3xl border p-7 transition-colors duration-300">
-              <p class="text-xs tracking-[0.18em] uppercase opacity-50">
-                {copy.last_updated} {updated}
-              </p>
-              <h2 class="font-secondary text-light mt-5 text-2xl">
-                {doc.title}
+          groups.map((group) => (
+            <section aria-labelledby={`legal-group-${group.id}`}>
+              <h2
+                id={`legal-group-${group.id}`}
+                class="text-secondary text-sm font-medium tracking-[0.22em] uppercase">
+                {group.title}
               </h2>
-              <p class="mt-3 flex-1 text-[0.975rem] leading-relaxed opacity-75">
-                {doc.summary}
-              </p>
-              <span
-                class="bg-white/10 group-hover:bg-primary mt-6 inline-flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors"
-                aria-hidden="true">
-                ↗
-              </span>
-            </a>
+              <div class="mt-6 grid gap-5 md:grid-cols-2">
+                {group.documents.map((doc) => (
+                  <a
+                    href={getLocaleUrlCTM(`/legal/${doc.slug}/`, locale)}
+                    class="legal-card group border-white/10 bg-white/[0.035] hover:border-primary/40 hover:bg-white/[0.055] relative flex min-h-[200px] flex-col rounded-3xl border p-7 transition-colors duration-300">
+                    <p class="text-xs tracking-[0.18em] uppercase opacity-50">
+                      {copy.last_updated}{" "}
+                      {formatLegalDate(doc.updated || LEGAL_UPDATED, locale)}
+                    </p>
+                    <h3 class="font-secondary text-light mt-5 text-2xl">
+                      {doc.title}
+                    </h3>
+                    <p class="mt-3 flex-1 text-[0.975rem] leading-relaxed opacity-75">
+                      {doc.summary}
+                    </p>
+                    <span
+                      class="bg-white/10 group-hover:bg-primary mt-6 inline-flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors"
+                      aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </section>
           ))
         }
       </div>

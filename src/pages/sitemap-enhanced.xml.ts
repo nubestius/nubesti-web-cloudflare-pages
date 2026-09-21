@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import parseTomlToJson from "@/lib/utils/parseTomlToJson";
 import { getLocaleUrlCTM, supportedLanguages } from "@/lib/utils/languageParser.ts";
+import { LEGAL_SLUGS } from "@/lib/legal";
 
 const config = parseTomlToJson("./src/config/config.toml");
 
@@ -56,35 +57,28 @@ export const GET: APIRoute = ({ site }) => {
     { url: 'fr/faq/', changefreq: 'monthly', priority: '0.6' },
     
     // Legal center
-    { url: 'legal/', changefreq: 'yearly', priority: '0.4' },
-    { url: 'legal/terms/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/privacy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/cookies/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/acceptable-use/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/refunds/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/dmca/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/sla/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/dpa/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/subprocessors/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/security/', changefreq: 'monthly', priority: '0.5' },
-    { url: 'legal/billing/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/engagement/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/accessibility/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/ethics/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'legal/imprint/', changefreq: 'yearly', priority: '0.3' },
-
-    { url: 'es/legal/', changefreq: 'yearly', priority: '0.4' },
-    { url: 'fr/legal/', changefreq: 'yearly', priority: '0.4' },
-    { url: 'pt/legal/', changefreq: 'yearly', priority: '0.4' },
-    { url: 'es/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'fr/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'pt/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'es/legal/terms/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'fr/legal/terms/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'pt/legal/terms/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'es/legal/security/', changefreq: 'monthly', priority: '0.5' },
-    { url: 'fr/legal/security/', changefreq: 'monthly', priority: '0.5' },
-    { url: 'pt/legal/security/', changefreq: 'monthly', priority: '0.5' },
+    { url: 'legal/', changefreq: 'monthly', priority: '0.4' },
+    ...LEGAL_SLUGS.map((slug) => ({
+      url: `legal/${slug}/`,
+      changefreq:
+        slug === "security" || slug === "vulnerability-disclosure"
+          ? "monthly"
+          : "yearly",
+      priority: slug === "kyc" || slug === "security" ? "0.5" : "0.3",
+    })),
+    { url: 'es/legal/', changefreq: 'monthly', priority: '0.4' },
+    { url: 'fr/legal/', changefreq: 'monthly', priority: '0.4' },
+    { url: 'pt/legal/', changefreq: 'monthly', priority: '0.4' },
+    ...['es', 'fr', 'pt'].flatMap((lang) =>
+      LEGAL_SLUGS.map((slug) => ({
+        url: `${lang}/legal/${slug}/`,
+        changefreq:
+          slug === "security" || slug === "vulnerability-disclosure"
+            ? "monthly"
+            : "yearly",
+        priority: "0.3",
+      })),
+    ),
   ];
   
   const currentDate = new Date().toISOString().split('T')[0];

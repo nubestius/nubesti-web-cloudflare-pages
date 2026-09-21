@@ -194,9 +194,15 @@
     },
     {
       "enable": true,
+      "name": "KYC & Verification",
+      "url": "/legal/kyc/",
+      "weight": 4
+    },
+    {
+      "enable": true,
       "name": "Legal Notice",
       "url": "/legal/imprint/",
-      "weight": 4
+      "weight": 5
     }
   ]
 }
