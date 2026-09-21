@@ -1,17 +1,16 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: Security Intelligence
-title: Complete Coverage <br /> of **Enterprise Security**
+enable: true
+subtitle: Scope
+title: Surfaces we are <br /> **built to test**
 
 list:
-  - Autonomous Agents
-  - MITRE ATT&CK
-  - OWASP Top 10
-  - Vulnerability Assessment
-  - Threat Detection
-  - Auto-Remediation
-  - Risk Prioritization
-  - Real-time Monitoring
-  - Compliance Reporting
-  - Zero-Day Protection
+  - Autonomous agents
+  - MITRE ATT&CK mapping
+  - OWASP Top 10 mapping
+  - Web applications
+  - APIs
+  - Cloud assets in scope
+  - Evidence and retest
+  - Risk prioritization
+  - Dated reports
 ---

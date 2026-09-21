@@ -31,22 +31,22 @@
             {
               "enable": true,
               "icon": "/images/icons/svg/security.svg",
-              "name": "Agentes Autónomos",
-              "description": "Los agentes autónomos impulsados por IA eliminan las pruebas manuales realizando evaluaciones de seguridad integrales automáticamente.",
+              "name": "Agentes autónomos",
+              "description": "Tras el KYC y la autorización, los agentes pueden ejecutar evaluaciones programadas sobre los activos que usted designe.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/focus.svg",
-              "name": "Cobertura MITRE ATT&CK",
-              "description": "Cobertura completa de las tácticas y técnicas del marco MITRE ATT&CK para simular escenarios de ataques del mundo real.",
+              "name": "Mapeo MITRE ATT&CK",
+              "description": "Flujos de prueba mapeados a técnicas MITRE ATT&CK. Mapear no es ejecutar toda la matriz.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/time.svg",
-              "name": "Cobertura OWASP Top 10",
-              "description": "Cobertura completa de pruebas para todas las vulnerabilidades del OWASP Top 10, incluyendo ataques de inyección, autenticación rota y configuraciones de seguridad incorrectas.",
+              "name": "Mapeo OWASP",
+              "description": "Comprobaciones mapeadas a clases de riesgo OWASP, con evidencia que un revisor puede aceptar o rechazar.",
               "url": "/ai-red-team/"
             },
             {
@@ -68,27 +68,33 @@
       "children": [
         {
           "enable": true,
-          "name": "Precios",
-          "url": "/pricing/",
+          "name": "Centro de confianza",
+          "url": "/trust/",
           "weight": 1
         },
         {
           "enable": true,
-          "name": "Preguntas Frecuentes",
-          "url": "/faq/",
+          "name": "Metodología",
+          "url": "/methodology/",
           "weight": 2
         },
         {
           "enable": true,
-          "name": "Integración",
-          "url": "/integration/",
+          "name": "Precios",
+          "url": "/pricing/",
           "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "Preguntas frecuentes",
+          "url": "/faq/",
+          "weight": 4
         },
         {
           "enable": true,
           "name": "Blog",
           "url": "/blog/",
-          "weight": 4
+          "weight": 5
         }
       ]
     },
@@ -98,7 +104,7 @@
       "url": "/contact/",
       "weight": 4,
       "badge": {
-        "enable": true,
+        "enable": false,
         "label": "NUEVO",
         "color": "danger",
         "_color_comment": "color expected value - primary, info, success, danger",
@@ -130,41 +136,53 @@
   "footer_menu_quick_link": [
     {
       "enable": true,
-      "name": "Precios",
-      "url": "/pricing/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Integración",
-      "url": "/integration/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Red Team IA",
+      "name": "Plataforma",
       "url": "/ai-red-team/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Preguntas Frecuentes",
-      "url": "/faq/",
-      "weight": 0
+      "name": "Metodología",
+      "url": "/methodology/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Precios",
+      "url": "/pricing/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Demo",
+      "url": "/demo/",
+      "weight": 3
     }
   ],
   "footer_menu_resources": [
     {
       "enable": true,
-      "name": "Blog",
-      "url": "/blog/",
+      "name": "Centro de confianza",
+      "url": "/trust/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Integración",
-      "url": "/integration/",
-      "weight": 0
+      "name": "Seguridad de plataforma",
+      "url": "/security/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Clientes",
+      "url": "/customers/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Divulgación de vulnerabilidades",
+      "url": "/legal/vulnerability-disclosure/",
+      "weight": 3
     }
   ],
   "footer_menu_legal": [
@@ -176,32 +194,32 @@
     },
     {
       "enable": true,
-      "name": "Términos del servicio",
-      "url": "/legal/terms/",
+      "name": "Privacidad",
+      "url": "/legal/privacy/",
       "weight": 1
     },
     {
       "enable": true,
-      "name": "Política de privacidad",
-      "url": "/legal/privacy/",
+      "name": "DPA",
+      "url": "/legal/dpa/",
       "weight": 2
     },
     {
       "enable": true,
-      "name": "Seguridad",
-      "url": "/legal/security/",
+      "name": "Subprocesadores",
+      "url": "/legal/subprocessors/",
       "weight": 3
-    },
-    {
-      "enable": true,
-      "name": "KYC y verificación",
-      "url": "/legal/kyc/",
-      "weight": 4
     },
     {
       "enable": true,
       "name": "Aviso legal",
       "url": "/legal/imprint/",
+      "weight": 4
+    },
+    {
+      "enable": true,
+      "name": "Acerca de",
+      "url": "/about/",
       "weight": 5
     }
   ]

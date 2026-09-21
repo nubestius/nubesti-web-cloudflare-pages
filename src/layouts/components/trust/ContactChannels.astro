@@ -1,0 +1,27 @@
+---
+import { getLocaleUrlCTM } from "@/lib/utils/languageParser.ts";
+import { getTrustBundle } from "@/lib/trust";
+
+const locale = Astro.currentLocale || "en";
+const bundle = getTrustBundle(locale);
+const { class: className } = Astro.props;
+
+function hrefFor(href: string) {
+  if (href.startsWith("mailto:") || href.startsWith("http")) return href;
+  return getLocaleUrlCTM(href, locale);
+}
+---
+
+<div class:list={["grid gap-4 md:grid-cols-2 xl:grid-cols-3", className]}>
+  {
+    bundle.channels.map((channel) => (
+      <a
+        href={hrefFor(channel.href)}
+        class="border-white/10 bg-white/[0.035] hover:border-primary/40 hover:bg-white/[0.055] rounded-3xl border p-6 transition-colors">
+        <p class="text-light text-lg">{channel.title}</p>
+        <p class="mt-2 text-sm leading-relaxed opacity-70">{channel.detail}</p>
+        <p class="text-secondary mt-4 text-sm">{channel.label}</p>
+      </a>
+    ))
+  }
+</div>

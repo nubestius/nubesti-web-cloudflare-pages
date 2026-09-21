@@ -7,15 +7,15 @@ subtitle: "Contact"
 contact_list:
   enable: true
   list:
-    - icon: "/images/icons/svg/phone.svg"
-      label: "Appelez-nous maintenant"
-      value: "+57 320 545 1915"
     - icon: "/images/icons/svg/email.svg"
-      label: "Envoyez-nous un e-mail"
-      value: "example@gmail.com"
-    - icon: "/images/icons/svg/whatsapp.svg"
-      label: "Discutez avec nous"
-      value: "@example"
+      label: "Ventes"
+      value: "alexis@nubesti.com"
+    - icon: "/images/icons/svg/email.svg"
+      label: "Sécurité"
+      value: "security@nubesti.com"
+    - icon: "/images/icons/svg/linkedin.svg"
+      label: "LinkedIn"
+      value: "linkedin.com/company/nubesti"
 
 social:
   enable: true
@@ -29,7 +29,7 @@ social:
 
 # Check config.toml file for form action related settings
 form:
-  email_subject: "Nouvelle soumission de formulaire depuis le site web Upstart" # Customized email subject (applicable when anyone submit form, form submission may receive by email depend on provider)
+  email_subject: "Nouvelle soumission de formulaire depuis nubesti.com"
   submit_button:
     label: "Soumettre"
   # This note will show at the end of form
@@ -148,7 +148,7 @@ form:
       content: We have received your message! We'll get back to you as soon as possible.
     - note: warning # info | warning | success | deprecated | hint
       parent_class: "hidden message error"
-      content: Something went wrong! please use this mail - [upstart-astro-theme@gmail.com](mailto:upstart-astro-theme@gmail.com) to submit a ticket!
+      content: Une erreur s’est produite. Écrivez à [alexis@nubesti.com](mailto:alexis@nubesti.com).
     # - note: info # info | warning | success | deprecated | hint
     #   parent_class: "text-sm message success"
     #   content: We have received your message! We'll get back to you as soon as possible.

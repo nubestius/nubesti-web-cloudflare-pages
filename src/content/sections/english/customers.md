@@ -1,6 +1,6 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-description: "Trusted By Thousands of Companies"
+enable: false
+description: ""
 
 marquee:
   # element_width: # width in rem (eg: 10rem or blank if width should be based on item width)

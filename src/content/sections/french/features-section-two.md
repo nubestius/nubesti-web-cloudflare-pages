@@ -1,18 +1,16 @@
 ---
-enable: true # Contr le de la visibilit  de cette section sur toutes les pages o  elle est utilis e
-subtitle: Fonctionnalit s
-title: Aper u <br /> des **fonctionnalit s de base**
+enable: true
+subtitle: Périmètre
+title: Surfaces que nous savons <br /> **tester**
 
 list:
-  - Langues
-  - Informations sur les visiteurs
-  - v nements personnalis s
-  - Vues de page
-  - Sources de trafic
-  - Emplacement
-  - Appareil
-  - Filtres
-  - Donn es en temps r el
-  - Taux de rebond
-  - quipes
+  - Agents autonomes
+  - Cartographie MITRE ATT&CK
+  - Cartographie OWASP Top 10
+  - Applications web
+  - APIs
+  - Actifs cloud dans le périmètre
+  - Preuves et retest
+  - Priorisation des risques
+  - Rapports datés
 ---

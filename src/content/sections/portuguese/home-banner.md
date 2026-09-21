@@ -1,24 +1,20 @@
 ---
-title: Plataforma de **Cibersegurança** Red Team Autônoma
-draft: false
-description: Nosso agente de cibersegurança alimentado por IA aproveita os frameworks MITRE ATT&CK e OWASP para identificar, validar e priorizar continuamente vulnerabilidades com precisão cirúrgica — minimizando substancialmente os falsos positivos enquanto gera automaticamente patches antes que as ameaças escalem.
+title: "Testes de segurança autónomos"
+description: Testes ofensivos contínuos contra ativos que autoriza — com evidência, paragem no portal e reteste depois de corrigir. O KYC pago é obrigatório antes dos testes.
 image: "/images/nubesti-ai-red-team-dashboard.png"
 buttons:
   - enable: true
-    label: "Agendar Demo"
-    url: "https://meetings.hubspot.com/alexis307"
+    label: "Começar a testar"
+    url: "https://app.nubesti.com"
     rel: ""
     target: "_blank"
   - enable: true
     label: "Como funciona"
-    type: "video"
-    video:
-      src: "supademo:cmejoymuu0e7p5gz32dcatf9l"
-      provider: supademo
-      autoplay: false
-      id: home-banner-video
+    url: "#how-it-works"
+    rel: ""
+    target: ""
 
 customers:
-  enable: true
-  description: "Confiado por Equipes de Segurança Empresarial"
+  enable: false
+  description: ""
 ---

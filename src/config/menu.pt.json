@@ -14,11 +14,11 @@
       "cta": {
         "enable": true,
         "image": "/images/nubesti-ai-red-team-dashboard.png",
-        "title": "Experimente os Testes de Red Team com IA",
-        "description": "Descubra como nossos agentes autônomos de IA identificam vulnerabilidades em seus sistemas.",
+        "title": "Ver os testes de Red Team com IA",
+        "description": "Como os agentes podem avaliar os ativos que autoriza, após KYC.",
         "cta_btn": {
           "enable": true,
-          "label": "Agendar uma Demo",
+          "label": "Agendar uma demo",
           "url": "https://meetings.hubspot.com/alexis307",
           "rel": "",
           "target": "_blank"
@@ -31,29 +31,29 @@
             {
               "enable": true,
               "icon": "/images/icons/svg/security.svg",
-              "name": "Agentes Autônomos",
-              "description": "Os agentes autônomos alimentados por IA eliminam os testes manuais realizando avaliações de segurança abrangentes automaticamente.",
+              "name": "Agentes autónomos",
+              "description": "Após KYC e autorização, os agentes podem executar avaliações agendadas nos ativos que designar.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/focus.svg",
-              "name": "Cobertura MITRE ATT&CK",
-              "description": "Cobertura completa das táticas e técnicas do framework MITRE ATT&CK para simular cenários de ataques do mundo real.",
+              "name": "Mapeamento MITRE ATT&CK",
+              "description": "Fluxos de teste mapeados para técnicas MITRE ATT&CK. Mapear não é executar a matriz inteira.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/time.svg",
-              "name": "Cobertura OWASP Top 10",
-              "description": "Cobertura completa de testes para todas as vulnerabilidades do OWASP Top 10, incluindo ataques de injeção, autenticação quebrada e configurações de segurança incorretas.",
+              "name": "Mapeamento OWASP",
+              "description": "Controlos mapeados para classes de risco OWASP, com evidência que um revisor pode aceitar ou rejeitar.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/data.svg",
               "name": "Integração",
-              "description": "Conecte perfeitamente com suas ferramentas e fluxos de trabalho existentes.",
+              "description": "Conectores para as ferramentas que já usa — conforme disponibilidade.",
               "url": "/integration/"
             }
           ]
@@ -68,37 +68,43 @@
       "children": [
         {
           "enable": true,
-          "name": "Preços",
-          "url": "/pricing/",
+          "name": "Centro de confiança",
+          "url": "/trust/",
           "weight": 1
         },
         {
           "enable": true,
-          "name": "Perguntas Frequentes",
-          "url": "/faq/",
+          "name": "Metodologia",
+          "url": "/methodology/",
           "weight": 2
         },
         {
           "enable": true,
-          "name": "Integração",
-          "url": "/integration/",
+          "name": "Preços",
+          "url": "/pricing/",
           "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "Perguntas frequentes",
+          "url": "/faq/",
+          "weight": 4
         },
         {
           "enable": true,
           "name": "Blog",
           "url": "/blog/",
-          "weight": 4
+          "weight": 5
         }
       ]
     },
     {
       "enable": true,
-      "name": "Contato",
+      "name": "Contacto",
       "url": "/contact/",
       "weight": 4,
       "badge": {
-        "enable": true,
+        "enable": false,
         "label": "NOVO",
         "color": "danger",
         "_color_comment": "color expected value - primary, info, success, danger",
@@ -130,41 +136,53 @@
   "footer_menu_quick_link": [
     {
       "enable": true,
-      "name": "Preços",
-      "url": "/pricing/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Integração",
-      "url": "/integration/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Red Team IA",
+      "name": "Plataforma",
       "url": "/ai-red-team/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Perguntas Frequentes",
-      "url": "/faq/",
-      "weight": 0
+      "name": "Metodologia",
+      "url": "/methodology/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Preços",
+      "url": "/pricing/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Demo",
+      "url": "/demo/",
+      "weight": 3
     }
   ],
   "footer_menu_resources": [
     {
       "enable": true,
-      "name": "Blog",
-      "url": "/blog/",
+      "name": "Centro de confiança",
+      "url": "/trust/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Integração",
-      "url": "/integration/",
-      "weight": 0
+      "name": "Segurança da plataforma",
+      "url": "/security/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Clientes",
+      "url": "/customers/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Divulgação de vulnerabilidades",
+      "url": "/legal/vulnerability-disclosure/",
+      "weight": 3
     }
   ],
   "footer_menu_legal": [
@@ -176,32 +194,32 @@
     },
     {
       "enable": true,
-      "name": "Termos de serviço",
-      "url": "/legal/terms/",
+      "name": "Privacidade",
+      "url": "/legal/privacy/",
       "weight": 1
     },
     {
       "enable": true,
-      "name": "Privacidade",
-      "url": "/legal/privacy/",
+      "name": "DPA",
+      "url": "/legal/dpa/",
       "weight": 2
     },
     {
       "enable": true,
-      "name": "Segurança",
-      "url": "/legal/security/",
+      "name": "Subprocessadores",
+      "url": "/legal/subprocessors/",
       "weight": 3
-    },
-    {
-      "enable": true,
-      "name": "KYC e verificação",
-      "url": "/legal/kyc/",
-      "weight": 4
     },
     {
       "enable": true,
       "name": "Aviso legal",
       "url": "/legal/imprint/",
+      "weight": 4
+    },
+    {
+      "enable": true,
+      "name": "Sobre",
+      "url": "/about/",
       "weight": 5
     }
   ]

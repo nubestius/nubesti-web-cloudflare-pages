@@ -1,54 +1,49 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: Pourquoi Upstart
-title: Prendre le contrôle avec des **analyses respectueuses**
+enable: true
+subtitle: Pourquoi les équipes l’utilisent
+title: Tests répétables sur un <br /> **périmètre autorisé**
+layout_type: creative
 
 list:
-  - title: Mettre la vie privée en premier
+  - title: Tests de sécurité continus
     image: "/images/why-us/1.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      Contrairement aux autres plateformes, Upstart ne suit pas les utilisateurs entre les sites web et ne collecte aucune information personnelle identifiable.
+      Les agents peuvent rejouer les mêmes playbooks autorisés selon le calendrier que vous choisissez, pour faire apparaître les constats pendant le sprint — pas seulement au pentest trimestriel.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: Posséder vos données
+  - title: Cartographie ATT&CK et OWASP
     image: "/images/why-us/2.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      Upstart est auto-hébergé, ce qui signifie que vos données de site web restent sur votre serveur. Vous avez le.
+      Les flux de test peuvent être cartographiés vers des techniques MITRE ATT&CK et des classes de risque OWASP. Cartographier n’est pas affirmer que toute la matrice a été exécutée.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: Se concentrer sur l'essentiel
-    # image: ""
-    description_font_size: "" # sm | lg (default - sm)
+  - title: Preuves avant une fenêtre de changement
+    description_font_size: ""
     description: |
-      Upstart suit les métriques de site web essentielles dont vous avez besoin - vues de page, démographie des visiteurs et événements personnalisés. Aucune donnée inutile.
+      Les constats doivent inclure un contexte technique qu’un reviewer peut accepter ou rejeter. Les correctifs en brouillon, quand ils existent, sont un point de départ — pas une fusion automatique.
     bounced_content:
       enable: true
       bg_image: "/images/why-us/3.png"
       list:
-        - Taux de rebond
-        - Filtres
-        - Équipes
-        - Suivi des UTM
-        - Informations sur les visiteurs
-        - Événements personnalisés
-        - Données en temps réel
-        - Emplacement
-        - Vues de page
-        - Données personnalisées
-        - Langues
-        - Comparaison
-        - Appareil
-        - Sources de trafic
+        - Périmètre autorisé
+        - Cartographie OWASP
+        - Tests de vulnérabilités
+        - Validation d’exploit
+        - Preuves
+        - Cartographie MITRE ATT&CK
+        - Retest
+        - Priorisation des risques
+        - Remédiations en brouillon
     cta_btn:
       enable: false
       label: ""

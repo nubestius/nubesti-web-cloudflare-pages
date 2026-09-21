@@ -1,193 +1,62 @@
 ---
 import { getCollection } from "astro:content";
-import parseTomlToJson from "@/lib/utils/parseTomlToJson";
-
-const config = parseTomlToJson("./src/config/config.toml");
-const baseUrl = config.site.base_url;
 
 interface FAQSchemaProps {
   faqData?: any[];
-  pageTitle?: string;
-  pageDescription?: string;
 }
 
-const { faqData, pageTitle, pageDescription } = Astro.props as FAQSchemaProps;
+const { faqData } = Astro.props as FAQSchemaProps;
 
-// Get FAQ data from collections if not provided
-let faqQuestions = faqData;
+let faqQuestions = faqData || [];
 
-if (!faqQuestions) {
+if (!faqQuestions.length) {
   try {
-    // Try to get FAQ data for current language
-    const currentLang = Astro.currentLocale || 'english';
-    const langFolder = currentLang === 'en' ? 'english' : currentLang;
-    
-    const faqCollection = await getCollection('faq', (entry) => {
-      return entry.id.startsWith(`${langFolder}/`);
-    });
-    
+    const currentLang = Astro.currentLocale || "en";
+    const langFolder =
+      currentLang === "en" || currentLang === "english" ? "english" : currentLang;
+    const faqCollection = await getCollection("faq", (entry) =>
+      entry.id.includes(`${langFolder}/`),
+    );
     if (faqCollection.length > 0) {
-      const faqPage = faqCollection[0];
-      faqQuestions = faqPage.data.faq_list?.flatMap((section: any) => section.list || []) || [];
+      const list = faqCollection[0].data.list || [];
+      faqQuestions = list.flatMap((section: any) =>
+        (section.list || []).map((item: any) => ({
+          question: item.title,
+          answer: item.content,
+        })),
+      );
     }
-  } catch (error) {
-    console.warn('Could not load FAQ data for schema:', error);
+  } catch {
     faqQuestions = [];
   }
 }
 
-// Cybersecurity-specific FAQ questions
-const cybersecurityFAQs = [
-  {
-    question: "How does AI-powered penetration testing work?",
-    answer: "Our AI agents simulate real-world attack scenarios 24/7, automatically identifying vulnerabilities, testing security controls, and providing actionable remediation guidance without human intervention using the MITRE ATT&CK framework."
-  },
-  {
-    question: "What security frameworks does Nubesti support?",
-    answer: "Nubesti supports comprehensive testing for OWASP Top 10, MITRE ATT&CK framework, NIST Cybersecurity Framework, ISO 27001/27002, SOC 2 Type II, PCI DSS, and HIPAA compliance standards."
-  },
-  {
-    question: "Is the platform safe for production environments?",
-    answer: "Yes, our platform uses non-destructive testing methods with intelligent rate limiting, business hours awareness, and comprehensive audit trails to ensure safe testing in production environments."
-  },
-  {
-    question: "How does the AI Red Team platform detect vulnerabilities?",
-    answer: "The platform combines machine learning algorithms with proven penetration testing methodologies to continuously scan, analyze, and test security controls across web applications, APIs, network infrastructure, and cloud environments."
-  },
-  {
-    question: "What types of compliance reports does Nubesti generate?",
-    answer: "Nubesti generates comprehensive compliance reports for SOC 2 Type II, ISO 27001, PCI DSS, HIPAA, NIST Cybersecurity Framework, and industry-specific regulatory requirements with detailed remediation guidance."
-  },
-  {
-    question: "How quickly can the platform detect and report new threats?",
-    answer: "Our AI-powered system provides real-time threat detection with immediate alerts for critical vulnerabilities. Comprehensive reports are generated within minutes of threat identification, enabling rapid response times."
-  },
-  {
-    question: "Does Nubesti integrate with existing security tools?",
-    answer: "Yes, Nubesti seamlessly integrates with popular SIEM systems, ticketing platforms, Slack/Teams, CI/CD pipelines, and other security tools through our comprehensive API and pre-built connectors."
-  },
-  {
-    question: "What makes Nubesti different from traditional penetration testing?",
-    answer: "Unlike traditional manual pentesting, Nubesti provides continuous 24/7 automated testing using AI agents that adapt to new threats, significantly reduce false positives, and provide surgical precision in vulnerability identification and remediation."
-  }
-];
-
-// Combine provided FAQ data with cybersecurity-specific questions
-const allFAQs = [...(faqQuestions || []), ...cybersecurityFAQs];
-
-// Create FAQ Page Schema
-const faqPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "@id": `${new URL(Astro.url.pathname, Astro.site).href}#faqpage`,
-  "name": pageTitle || "Frequently Asked Questions - Nubesti AI Red Team",
-  "description": pageDescription || "Get answers to common questions about Nubesti's AI-powered cybersecurity platform, penetration testing, and security services.",
-  "url": new URL(Astro.url.pathname, Astro.site).href,
-  "inLanguage": Astro.currentLocale || "en",
-  "dateModified": new Date().toISOString().split('T')[0],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Nubesti",
-    "url": baseUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${baseUrl}/images/logo-nubesti.svg`,
-      "width": 300,
-      "height": 100
-    }
-  },
-  "mainEntity": allFAQs.slice(0, 15).map((faq, index) => ({
+const mainEntity = (faqQuestions || [])
+  .filter((item: any) => item.question || item.title)
+  .slice(0, 12)
+  .map((item: any) => ({
     "@type": "Question",
-    "@id": `${new URL(Astro.url.pathname, Astro.site).href}#faq-${index + 1}`,
-    "name": faq.title || faq.question,
-    "acceptedAnswer": {
+    name: item.question || item.title,
+    acceptedAnswer: {
       "@type": "Answer",
-      "text": faq.content || faq.answer,
-      "dateCreated": new Date().toISOString().split('T')[0],
-      "author": {
-        "@type": "Organization",
-        "name": "Nubesti"
-      }
+      text: String(item.answer || item.content || "")
+        .replace(/[#*_`]/g, "")
+        .trim(),
     },
-    "answerCount": 1
-  })),
-  "about": {
-    "@type": "Thing",
-    "name": "Cybersecurity Services",
-    "description": "AI-powered penetration testing and red team operations"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": ["IT Professionals", "Security Teams", "CISOs", "Developers"],
-    "geographicArea": {
-      "@type": "Place",
-      "name": "Global"
-    }
-  }
-};
+  }));
 
-// Additional How-To Schema for cybersecurity processes
-const howToSchema = {
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "@id": `${new URL(Astro.url.pathname, Astro.site).href}#howto`,
-  "name": "How to Implement AI-Powered Penetration Testing",
-  "description": "Step-by-step guide to implementing autonomous red team operations with Nubesti's AI platform",
-  "image": `${baseUrl}/images/nubesti-ai-red-team-dashboard.png`,
-  "totalTime": "PT30M",
-  "estimatedCost": {
-    "@type": "MonetaryAmount",
-    "currency": "USD",
-    "value": "690"
-  },
-  "supply": [
-    {
-      "@type": "HowToSupply",
-      "name": "Nubesti AI Red Team Platform Access"
-    },
-    {
-      "@type": "HowToSupply", 
-      "name": "Target Environment Configuration"
-    }
-  ],
-  "tool": [
-    {
-      "@type": "HowToTool",
-      "name": "MITRE ATT&CK Framework"
-    },
-    {
-      "@type": "HowToTool",
-      "name": "OWASP Testing Guide"
-    }
-  ],
-  "step": [
-    {
-      "@type": "HowToStep",
-      "name": "Platform Setup",
-      "text": "Configure your Nubesti account and connect to target environments",
-      "url": `${baseUrl}/demo/`,
-      "image": `${baseUrl}/images/setup-step.png`
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Define Testing Scope",
-      "text": "Specify target applications, networks, and compliance requirements",
-      "url": `${baseUrl}/contact/`,
-      "image": `${baseUrl}/images/scope-step.png`
-    },
-    {
-      "@type": "HowToStep",
-      "name": "AI Agent Deployment",
-      "text": "Deploy autonomous AI agents to begin continuous security testing",
-      "url": `${baseUrl}/pricing/`,
-      "image": `${baseUrl}/images/deployment-step.png`
-    }
-  ]
-};
+const faqPageSchema =
+  mainEntity.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity,
+      }
+    : null;
 ---
 
-<!-- FAQ Page Schema -->
-<script type="application/ld+json" data-schema="faq-page" set:html={JSON.stringify(faqPageSchema, null, 2)} />
-
-<!-- How-To Schema for cybersecurity implementation -->
-<script type="application/ld+json" data-schema="howto-guide" set:html={JSON.stringify(howToSchema, null, 2)} />
+{
+  faqPageSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
+  )
+}

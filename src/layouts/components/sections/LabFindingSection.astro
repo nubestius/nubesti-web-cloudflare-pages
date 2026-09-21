@@ -1,0 +1,50 @@
+---
+import { getTrustBundle } from "@/lib/trust";
+
+const lab = getTrustBundle(Astro.currentLocale).lab;
+
+const rows = [
+  ["Asset", lab.asset],
+  ["Finding", lab.finding],
+  ["Severity", lab.severity],
+  ["MITRE ATT&CK", lab.mitre],
+  ["Evidence", lab.evidence],
+  ["Exploitability", lab.exploitability],
+  ["Impact", lab.impact],
+  ["Remediation", lab.remediation],
+  ["Status", lab.status],
+  ["Retest", lab.retest],
+];
+---
+
+<section id="see-it-work" class="relative py-16 md:py-24">
+  <div class="container">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-secondary text-sm font-medium tracking-[0.22em] uppercase">
+        {lab.eyebrow}
+      </p>
+      <h2 class="font-secondary text-light mt-4 text-4xl md:text-5xl">
+        {lab.title}
+      </h2>
+      <p class="border-white/10 bg-white/[0.04] mt-6 rounded-2xl border px-5 py-4 text-sm leading-relaxed opacity-80">
+        {lab.notice}
+      </p>
+    </div>
+    <div class="border-white/10 bg-white/[0.035] mx-auto mt-12 max-w-3xl overflow-hidden rounded-3xl border">
+      <dl>
+        {
+          rows.map(([label, value], index) => (
+            <div
+              class:list={[
+                "grid gap-2 px-6 py-4 sm:grid-cols-[11rem_1fr] sm:items-start",
+                index !== 0 && "border-white/10 border-t",
+              ]}>
+              <dt class="text-xs tracking-[0.16em] uppercase opacity-50">{label}</dt>
+              <dd class="text-light text-[0.975rem] leading-relaxed">{value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</section>

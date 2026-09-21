@@ -1,0 +1,40 @@
+---
+import { getLocaleUrlCTM } from "@/lib/utils/languageParser.ts";
+import { getTrustBundle } from "@/lib/trust";
+
+const locale = Astro.currentLocale || "en";
+const page = getTrustBundle(locale).pages.trust;
+const links = [
+  { href: "/trust/", label: page.crumb },
+  { href: "/security/", label: getTrustBundle(locale).pages.security.crumb },
+  { href: "/methodology/", label: getTrustBundle(locale).pages.methodology.crumb },
+  { href: "/legal/", label: "Legal" },
+];
+---
+
+<section class="py-16 md:py-24">
+  <div class="container">
+    <div class="border-white/10 bg-white/[0.035] rounded-[2rem] border px-8 py-12 md:px-14">
+      <p class="text-secondary text-sm font-medium tracking-[0.22em] uppercase">
+        {page.eyebrow}
+      </p>
+      <h2 class="font-secondary text-light mt-4 max-w-3xl text-3xl md:text-5xl">
+        {page.title}
+      </h2>
+      <p class="mt-5 max-w-2xl text-lg opacity-75">{page.intro}</p>
+      <ul class="mt-10 flex flex-wrap gap-3">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                class="border-white/10 hover:border-primary/40 inline-flex rounded-full border px-4 py-2 text-sm opacity-90 hover:text-white"
+                href={getLocaleUrlCTM(link.href, locale)}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

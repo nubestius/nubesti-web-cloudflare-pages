@@ -7,15 +7,15 @@ subtitle: "Contacto"
 contact_list:
   enable: true
   list:
-    - icon: "/images/icons/svg/phone.svg"
-      label: "Llámanos ahora"
-      value: "+57 320 545 1915"
     - icon: "/images/icons/svg/email.svg"
-      label: "Escríbenos"
-      value: "hi@nubesti.com"
-    - icon: "/images/icons/svg/whatsapp.svg"
-      label: "Chatea con nosotros"
-      value: "@nubesti"
+      label: "Ventas"
+      value: "alexis@nubesti.com"
+    - icon: "/images/icons/svg/email.svg"
+      label: "Seguridad"
+      value: "security@nubesti.com"
+    - icon: "/images/icons/svg/linkedin.svg"
+      label: "LinkedIn"
+      value: "linkedin.com/company/nubesti"
 
 social:
   enable: true
@@ -138,5 +138,5 @@ form:
       content: ¡Hemos recibido tu mensaje! Te responderemos lo antes posible.
     - note: warning # info | warning | success | deprecated | hint
       parent_class: "hidden message error"
-      content: ¡Algo salió mal! Por favor usa este email - [hi@nubesti.com](mailto:hi@nubesti.com) para enviar tu consulta.
+      content: Algo salió mal. Escriba a [alexis@nubesti.com](mailto:alexis@nubesti.com).
 ---

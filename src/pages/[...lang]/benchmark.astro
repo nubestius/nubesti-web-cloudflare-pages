@@ -1,0 +1,13 @@
+---
+import TrustPage from "@/layouts/components/trust/TrustPage.astro";
+import { generatePaths } from "@/lib/utils/languageParser.ts";
+import { getTrustPage } from "@/lib/trust";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const page = getTrustPage("benchmark", Astro.currentLocale);
+---
+
+<TrustPage page={page} />

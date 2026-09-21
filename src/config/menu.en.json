@@ -32,21 +32,21 @@
               "enable": true,
               "icon": "/images/icons/svg/security.svg",
               "name": "Autonomous Agents",
-              "description": "AI-powered autonomous agents eliminate manual testing by conducting comprehensive security assessments automatically.",
+              "description": "After KYC and authorization, agents can run scheduled assessments on assets you designate.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/focus.svg",
-              "name": "MITRE ATT&CK Coverage",
-              "description": "Full coverage of MITRE ATT&CK framework tactics and techniques to simulate real-world attack scenarios.",
+              "name": "MITRE ATT&CK mapping",
+              "description": "Testing workflows mapped to MITRE ATT&CK techniques. Mapping is not a claim that every technique ran.",
               "url": "/ai-red-team/"
             },
             {
               "enable": true,
               "icon": "/images/icons/svg/time.svg",
-              "name": "OWASP Top 10 Coverage",
-              "description": "Complete testing coverage for all OWASP Top 10 vulnerabilities including injection attacks, broken authentication, and security misconfigurations.",
+              "name": "OWASP mapping",
+              "description": "Checks mapped to OWASP risk classes, with evidence a reviewer can accept or reject.",
               "url": "/ai-red-team/"
             },
             {
@@ -68,27 +68,33 @@
       "children": [
         {
           "enable": true,
-          "name": "Pricing",
-          "url": "/pricing/",
+          "name": "Trust Center",
+          "url": "/trust/",
           "weight": 1
         },
         {
           "enable": true,
-          "name": "Faq",
-          "url": "/faq/",
+          "name": "Methodology",
+          "url": "/methodology/",
           "weight": 2
         },
         {
           "enable": true,
-          "name": "Integration",
-          "url": "/integration/",
+          "name": "Pricing",
+          "url": "/pricing/",
           "weight": 3
+        },
+        {
+          "enable": true,
+          "name": "FAQ",
+          "url": "/faq/",
+          "weight": 4
         },
         {
           "enable": true,
           "name": "Blog",
           "url": "/blog/",
-          "weight": 4
+          "weight": 5
         }
       ]
     },
@@ -98,7 +104,7 @@
       "url": "/contact/",
       "weight": 4,
       "badge": {
-        "enable": true,
+        "enable": false,
         "label": "NEW",
         "color": "danger",
         "_color_comment": "color expected value - primary, info, success, danger",
@@ -130,41 +136,53 @@
   "footer_menu_quick_link": [
     {
       "enable": true,
-      "name": "Pricing",
-      "url": "/pricing/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "Integration",
-      "url": "/integration/",
-      "weight": 0
-    },
-    {
-      "enable": true,
-      "name": "AI Red Team",
+      "name": "Platform",
       "url": "/ai-red-team/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Faq",
-      "url": "/faq/",
-      "weight": 0
+      "name": "Methodology",
+      "url": "/methodology/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Pricing",
+      "url": "/pricing/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Demo",
+      "url": "/demo/",
+      "weight": 3
     }
   ],
   "footer_menu_resources": [
     {
       "enable": true,
-      "name": "Blog",
-      "url": "/blog/",
+      "name": "Trust Center",
+      "url": "/trust/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Integration",
-      "url": "/integration/",
-      "weight": 0
+      "name": "Platform security",
+      "url": "/security/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Customers",
+      "url": "/customers/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Vulnerability disclosure",
+      "url": "/legal/vulnerability-disclosure/",
+      "weight": 3
     }
   ],
   "footer_menu_legal": [
@@ -176,32 +194,32 @@
     },
     {
       "enable": true,
-      "name": "Terms of Service",
-      "url": "/legal/terms/",
+      "name": "Privacy",
+      "url": "/legal/privacy/",
       "weight": 1
     },
     {
       "enable": true,
-      "name": "Privacy Policy",
-      "url": "/legal/privacy/",
+      "name": "DPA",
+      "url": "/legal/dpa/",
       "weight": 2
     },
     {
       "enable": true,
-      "name": "Security",
-      "url": "/legal/security/",
+      "name": "Subprocessors",
+      "url": "/legal/subprocessors/",
       "weight": 3
     },
     {
       "enable": true,
-      "name": "KYC & Verification",
-      "url": "/legal/kyc/",
+      "name": "Legal notice",
+      "url": "/legal/imprint/",
       "weight": 4
     },
     {
       "enable": true,
-      "name": "Legal Notice",
-      "url": "/legal/imprint/",
+      "name": "About",
+      "url": "/about/",
       "weight": 5
     }
   ]

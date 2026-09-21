@@ -1,17 +1,17 @@
 ---
 enable: true
-title: Ready to Secure <br /> **Your Enterprise?**
-rating_content: 4.9 / 5 <br /> From Enterprise Security Teams
+title: Ready to test an <br /> **authorized scope?**
+rating_content: ""
 
 cta_btn:
   enable: true
-  label: Book a Demo
+  label: Talk to sales
   url: https://meetings.hubspot.com/alexis307
   rel: ""
   target: "_blank"
 
 features:
-  - 24/7 autonomous testing
-  - Minimal false positives
-  - Auto-remediation patches
+  - Paid KYC before tests
+  - Evidence on each finding
+  - Portal stop control
 ---

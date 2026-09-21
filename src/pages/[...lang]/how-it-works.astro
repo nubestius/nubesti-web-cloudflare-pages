@@ -1,0 +1,18 @@
+---
+import TrustPage from "@/layouts/components/trust/TrustPage.astro";
+import LabFindingSection from "@/layouts/components/sections/LabFindingSection.astro";
+import { generatePaths } from "@/lib/utils/languageParser.ts";
+import { getTrustPage } from "@/lib/trust";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const page = getTrustPage("how-it-works", Astro.currentLocale);
+---
+
+<TrustPage page={page} showSteps={true}>
+  <div class="mt-8">
+    <LabFindingSection />
+  </div>
+</TrustPage>

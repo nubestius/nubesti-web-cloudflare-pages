@@ -6,7 +6,6 @@ import Favicons from "@/components/seo/Favicons.astro";
 import AdvancedSchema from "@/layouts/components/seo/AdvancedSchema.astro";
 import CybersecuritySchema from "@/layouts/components/seo/CybersecuritySchema.astro";
 import FAQSchema from "@/layouts/components/seo/FAQSchema.astro";
-import TestimonialSchema from "@/layouts/components/seo/TestimonialSchema.astro";
 import PricingSchema from "@/layouts/components/seo/PricingSchema.astro";
 import VideoSchema from "@/layouts/components/seo/VideoSchema.astro";
 import ArticleSchema from "@/layouts/components/seo/ArticleSchema.astro";
@@ -108,11 +107,6 @@ const themeColor = theme.colors.default.theme_color.primary;
   <!-- FAQ Schema for FAQ pages -->
   {Astro.url.pathname.includes('/faq') && (
     <FAQSchema {...Astro.props} />
-  )}
-
-  <!-- Testimonial Schema for pages with testimonials -->
-  {(Astro.url.pathname === '/' || Astro.url.pathname.includes('/testimonial')) && (
-    <TestimonialSchema {...Astro.props} />
   )}
 
   <!-- Pricing Schema for pricing pages -->

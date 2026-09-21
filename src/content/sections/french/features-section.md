@@ -1,13 +1,13 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: Fonctionnalités en un coup
-title: Upstart rend l'analyse de vos **données sans effort**
+enable: true
+subtitle: Capacités
+title: Ce pour quoi la plateforme **est conçue**
 
 list:
-  - title: Facile d'utilisation
-    description: Puissant et simple, Upstart est facile d'utilisation et ne nécessite pas de configuration compliquée ou de balises.
-  - title: UTMs et événements
-    description: Upstart comprend automatiquement les liens avec des paramètres UTM et vous permet de consulter et de filtrer vos données de site web en fonction des UTMs.
-  - title: Pas de bannières de cookies
-    description: Toutes les données sont anonymisées avec Upstart, et aucune information personnelle n'est jamais collectée sur vos utilisateurs de site web.
+  - title: Tests autonomes
+    description: Après KYC et autorisation, les agents peuvent lancer des évaluations planifiées sur les actifs que vous désignez — sans qu’un humain clique chaque contrôle.
+  - title: Cartographie ATT&CK et OWASP
+    description: Flux cartographiés vers des techniques MITRE ATT&CK et des classes OWASP. Le rapport doit indiquer quels contrôles ont réellement tourné.
+  - title: Moins de bruit scanner
+    description: Les constats sont validés avec des contrôles d’exploitabilité et des preuves. Nous n’affirmons pas zéro faux positif.
 ---

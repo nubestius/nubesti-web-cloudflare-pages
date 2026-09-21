@@ -8,15 +8,15 @@ draft: false
 contact_list:
   enable: true
   list:
-    - icon: "/images/icons/svg/phone.svg"
-      label: "Ligue agora"
-      value: "+57 320 545 1915"
     - icon: "/images/icons/svg/email.svg"
-      label: "Envie um email"
-      value: "hi@nubesti.com"
-    - icon: "/images/icons/svg/whatsapp.svg"
-      label: "Converse conosco"
-      value: "@nubesti"
+      label: "Vendas"
+      value: "alexis@nubesti.com"
+    - icon: "/images/icons/svg/email.svg"
+      label: "Segurança"
+      value: "security@nubesti.com"
+    - icon: "/images/icons/svg/linkedin.svg"
+      label: "LinkedIn"
+      value: "linkedin.com/company/nubesti"
 
 social:
   enable: true
@@ -30,7 +30,7 @@ social:
 
 # Check config.toml file for form action related settings
 form:
-  email_subject: "Nova submissão de formulário do site upstart" # Customized email subject (applicable when anyone submit form, form submission may receive by email depend on provider)
+  email_subject: "Nova submissão de formulário de nubesti.com"
   submit_button:
     label: "Enviar"
   # This note will show at the end of form
@@ -148,5 +148,5 @@ form:
       content: Recebemos sua mensagem! Entraremos em contato o mais breve possível.
     - note: warning # info | warning | success | deprecated | hint
       parent_class: "hidden message error"
-      content: Algo deu errado! Use este email - [upstart-astro-theme@gmail.com](mailto:upstart-astro-theme@gmail.com) para enviar um ticket!
+      content: Algo deu errado. Escreva para [alexis@nubesti.com](mailto:alexis@nubesti.com).
 ---

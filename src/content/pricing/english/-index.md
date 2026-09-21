@@ -1,51 +1,19 @@
 ---
-title: "AI Red Team Security Pricing"
-meta_description: "Choose the perfect AI Red Team plan for your organization. From startups to enterprises, we offer comprehensive cybersecurity testing with transparent pricing."
+title: "AI Red Team pricing"
+meta_description: "Public Nubesti plans start at $690/month (Starter) and $1,500/month (Professional). Enterprise is custom. Eligible plans may include a 14-day trial. Paid KYC is required before tests."
 draft: false
 ---
 
-## Transparent Pricing for AI-Powered Security Testing
+## Pricing
 
-Our AI Red Team platform offers flexible pricing plans designed to meet the security needs of organizations of all sizes. Each plan includes advanced threat simulation, vulnerability assessment, and comprehensive reporting to strengthen your cybersecurity posture.
+Public plans:
 
-### Pricing Overview
+- **Starter**: $690/month (or $6,900/year)
+- **Professional**: $1,500/month (or $15,000/year)
+- **Enterprise**: custom quote
 
-**Starter Plan**: Starting at $690/month
-Perfect for small teams and startups looking to implement basic AI-powered security testing.
+Eligible plans may include a **14-day trial**. Payment method depends on the offer. Paid KYC / verification is required before seats or tests are activated, and that fee is generally not refunded.
 
-**Professional Plan**: Starting at $1,500/month  
-Ideal for growing organizations that need comprehensive threat simulation and advanced reporting.
+Workflows can map to OWASP risk classes and MITRE ATT&CK techniques. Mapping is not a claim that every technique ran. Exportable dated findings can attach to *your* audit program. Nubesti does not claim SOC 2 / ISO / PCI / HIPAA certification.
 
-**Enterprise Plan**: Custom pricing
-Tailored solutions for large enterprises with complex security requirements and unlimited testing needs.
-
-### What's Included in All Plans
-
-- **OWASP Framework Compliance**: Comprehensive testing against OWASP Top 10 vulnerabilities
-- **MITRE ATT&CK Integration**: Real-world attack technique simulation
-- **Automated Vulnerability Detection**: AI-powered scanning and threat identification
-- **Detailed Security Reports**: Executive summaries and technical documentation
-- **Cloud Platform Support**: Testing across major cloud providers
-- **Integration Capabilities**: Connect with your existing security tools
-
-### Enterprise Add-Ons
-
-**Custom Compliance Packages**: SOC 2, ISO 27001, PCI DSS, HIPAA
-Starting at $500/month
-
-**Dedicated Security Engineer**: Personal security consultant and implementation support
-Starting at $2,500/month
-
-**On-Premise Deployment**: Private cloud or on-site installation
-Contact sales for pricing
-
-**Advanced Threat Intelligence**: Custom threat modeling and industry-specific attack scenarios
-Starting at $1,000/month
-
-### Free Trial Available
-
-Start with a 14-day free trial on any plan. No credit card required. Test up to 3 applications and experience the power of AI-driven security testing.
-
----
-
-*All prices are in USD and billed according to your selected plan frequency. Enterprise discounts available for annual commitments and multi-year contracts.*
+For add-ons (dedicated engineer, on-premise, custom playbooks), contact sales: [alexis@nubesti.com](mailto:alexis@nubesti.com).

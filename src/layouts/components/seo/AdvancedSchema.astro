@@ -1,238 +1,44 @@
 ---
-import parseTomlToJson from "@/lib/utils/parseTomlToJson";
+import { organizationJsonLd } from "@/lib/schema/organization";
+import { COMPANY } from "@/lib/company";
 
-const config = parseTomlToJson("./src/config/config.toml");
+const organizationSchema = organizationJsonLd();
 
-interface SchemaProps {
-  type?: 'website' | 'organization' | 'article' | 'product' | 'service';
-  title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  author?: string;
-  datePublished?: string;
-  dateModified?: string;
-  price?: string;
-  currency?: string;
-}
-
-const {
-  type = 'website',
-  title,
-  description,
-  image,
-  url,
-  author,
-  datePublished,
-  dateModified,
-  price,
-  currency = 'USD'
-} = Astro.props as SchemaProps;
-
-// Base URL for the site
-const baseUrl = config.site.base_url;
-const currentUrl = url || new URL(Astro.url.pathname, Astro.site).href;
-
-// Organization schema (always included)
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Nubesti",
-  "url": baseUrl,
-  "logo": `${baseUrl}/images/logo-nubesti.svg`,
-  "description": "Leading AI-powered cybersecurity platform for autonomous penetration testing and vulnerability assessment",
-  "foundingDate": "2024",
-  "industry": "Cybersecurity",
-  "serviceArea": "Global",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+57-320-545-1915",
-    "contactType": "Customer Service",
-    "email": "hi@nubesti.com",
-    "availableLanguage": ["English", "Spanish", "French"]
-  },
-  "sameAs": [
-    "https://twitter.com/nubesti",
-    "https://linkedin.com/company/nubesti",
-    "https://github.com/nubesti"
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Cybersecurity Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "AI-Powered Penetration Testing",
-          "description": "Autonomous red team operations using MITRE ATT&CK framework"
-        }
-      },
-      {
-        "@type": "Offer", 
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Continuous Vulnerability Assessment",
-          "description": "24/7 automated security testing and threat simulation"
-        }
-      }
-    ]
-  }
-};
-
-// Website schema
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": config.site.title,
-  "url": baseUrl,
-  "description": config.site.description,
-  "publisher": {
+  name: COMPANY.name,
+  url: COMPANY.website,
+  description:
+    "Continuous autonomous security testing against customer-authorized assets.",
+  publisher: {
     "@type": "Organization",
-    "name": "Nubesti"
+    name: COMPANY.legalName,
+    legalName: COMPANY.legalName,
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": `${baseUrl}/search?q={search_term_string}`,
-    "query-input": "required name=search_term_string"
-  },
-  "inLanguage": ["en", "es", "fr"]
+  inLanguage: ["en", "es", "fr", "pt"],
 };
 
-// Service schema for cybersecurity
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "AI-Powered Cybersecurity Platform",
-  "description": "Advanced autonomous red team operations and penetration testing using artificial intelligence",
-  "provider": {
+  name: "Autonomous security testing",
+  description:
+    "Repeatable offensive testing of customer-authorized web, API, and cloud assets, with evidence and retest.",
+  provider: {
     "@type": "Organization",
-    "name": "Nubesti"
+    name: COMPANY.legalName,
+    legalName: COMPANY.legalName,
   },
-  "serviceType": "Cybersecurity",
-  "category": "Information Security",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Cybersecurity Solutions",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Autonomous Red Team",
-        "description": "AI-driven penetration testing with MITRE ATT&CK framework"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Vulnerability Assessment",
-        "description": "Continuous security monitoring and threat detection"
-      },
-      {
-        "@type": "Offer",
-        "name": "Compliance Testing", 
-        "description": "OWASP, SOC 2, ISO 27001 compliance verification"
-      }
-    ]
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Enterprise"
-  }
+  serviceType: "Security testing",
+  areaServed: "Worldwide",
 };
 
-// Article schema (for blog posts)
-const articleSchema = title && datePublished ? {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "description": description,
-  "image": image ? `${baseUrl}${image}` : `${baseUrl}/images/og-image.jpg`,
-  "author": {
-    "@type": "Person",
-    "name": author || "Nubesti Team"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Nubesti",
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${baseUrl}/images/logo-nubesti.svg`
-    }
-  },
-  "datePublished": datePublished,
-  "dateModified": dateModified || datePublished,
-  "url": currentUrl
-} : null;
-
-// Product/Service schema with pricing
-const productSchema = price ? {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": title || "Nubesti Cybersecurity Platform",
-  "description": description || "AI-powered autonomous red team and penetration testing platform",
-  "image": image ? `${baseUrl}${image}` : `${baseUrl}/images/og-image.jpg`,
-  "brand": {
-    "@type": "Brand",
-    "name": "Nubesti"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": price,
-    "priceCurrency": currency,
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Nubesti"
-    }
-  }
-} : null;
-
-// Compile schemas based on type
 const schemas = [organizationSchema, websiteSchema, serviceSchema];
-
-if (type === 'article' && articleSchema) {
-  schemas.push(articleSchema);
-}
-
-if (type === 'product' && productSchema) {
-  schemas.push(productSchema);
-}
-
-// FAQPage schema for FAQ sections
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Nubesti's AI Red Team platform?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nubesti provides an autonomous AI-powered red team platform that conducts continuous penetration testing and vulnerability assessments using the MITRE ATT&CK framework and OWASP methodologies."
-      }
-    },
-    {
-      "@type": "Question", 
-      "name": "How does AI-powered penetration testing work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our AI agents simulate real-world attack scenarios 24/7, automatically identifying vulnerabilities, testing security controls, and providing actionable remediation guidance without human intervention."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Nubesti compliant with industry standards?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, Nubesti supports compliance testing for SOC 2 Type II, ISO 27001/27002, PCI DSS, HIPAA, and NIST Cybersecurity Framework standards."
-      }
-    }
-  ]
-};
-
-if (Astro.url.pathname.includes('faq')) {
-  schemas.push(faqSchema);
-}
 ---
 
-{schemas.map((schema) => (
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-))}
+{
+  schemas.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))
+}

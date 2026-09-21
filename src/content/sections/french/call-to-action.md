@@ -1,16 +1,17 @@
 ---
 enable: true
-title: Démarrer essai <br /> **de 7 jours**
-rating_content: 4.8 / 5 <br /> De 12000+ Avis de Clients
+title: Prêt à tester un <br /> **périmètre autorisé ?**
+rating_content: ""
 
 cta_btn:
   enable: true
-  label: Commencer
+  label: Parler aux ventes
   url: https://meetings.hubspot.com/alexis307
   rel: ""
   target: "_blank"
 
 features:
-  - Aucune carte de crédit requise
-  - Essai gratuit de 7 jours
+  - KYC payant avant les tests
+  - Preuve sur chaque constat
+  - Arrêt depuis le portail
 ---

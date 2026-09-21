@@ -80,11 +80,9 @@
     organization_name = "Nubesti"
     organization_url = "https://nubesti.com"
     organization_logo = "https://nubesti.com/images/logo-nubesti.svg"
-    organization_description = "Leading AI-powered cybersecurity platform for autonomous penetration testing"
+    organization_description = "Nubesti LLC provides continuous autonomous security testing against customer-authorized assets."
     same_as = [
-      "https://twitter.com/nubesti",
-      "https://linkedin.com/company/nubesti",
-      "https://github.com/nubesti"
+      "https://www.linkedin.com/company/nubesti"
     ]
 
 
@@ -118,7 +116,7 @@
 
   # Mailchimp Subscription Form located in footer
   [settings.subscription]
-    enable      = true # Enables or disable the subscription form
+    enable      = false # Disabled until a Nubesti-owned list is confirmed
     title       = "" # Check src/i18n/en.json and src/i18n/fr.json for changing the title in different languages or directly add value here if you are not using internationalization feature
     form_action = "https://gmail.us11.list-manage.com/subscribe/post?u=d870b06d86c16269e4b1f9b39&amp;id=12cf0c6ac2&amp;f_id=007e61e1f0"
 

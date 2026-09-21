@@ -1,226 +1,249 @@
 ---
-enable: true # Contrôle la visibilité de cette section sur toutes les pages où elle est utilisée
-title: Tarifs qui **font sens**
+enable: true
+title: Plans de sécurité **AI Red Team**
 
 plans:
   enable: true
   list:
-    # Liste des plans disponibles. Assurez-vous de utiliser ces noms de manière cohérente dans les endroits où cela est applicable.
     - selected: true
-      label: Mensuel # Utilisez cette valeur exactement dans tous les endroits correspondants ci-dessous.
+      label: Mensuel
     - selected: false
-      label: Annuel # Utilisez cette valeur exactement dans tous les endroits correspondants ci-dessous.
+      label: Annuel
 
 list:
-  # Plan de base
   - enable: true
     featured: false
     badge:
       enable: false
       label: Le plus populaire
-    name: De base # Nom du plan de tarification.
-    description: Nostrud exercitation ullamco laboris nisi ut aliquip ex
+    name: Starter
+    description: Détection essentielle de vulnérabilités assistée par IA pour petites équipes et applications
 
     price:
-      # Détails des prix pour chaque type de plan.
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Mensuel
         prepend_value: $
-        value: 10
+        value: 690
         append_value:
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Annuel
         prepend_value: $
-        value: 20
+        value: 6,900
         append_value:
 
     features:
-      - Suivi de base des vues de pages, des événements et des propriétés utilisateur
-      - Visualisation des données en temps réel
-      - Options d'exportation de données limitées **CSV**
-      - Temps de réponse du support de 48 heures
+      - "Scan automatisé **OWASP Top 10**"
+      - "Simulation de techniques **MITRE ATT&CK** de base"
+      - Tests de sécurité d’applications web
+      - "**5 applications** ou endpoints cibles"
+      - Rapports mensuels
+      - Support e-mail (réponse 24-48 h)
 
     usages:
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Mensuel
         list:
-          - label: Points de données
-            value: 536
-          - label: Trafic
-            value: 100
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+          - label: Apps cibles
+            value: 5
+          - label: Heures de scan
+            value: 40
+      - type: Annuel
         list:
-          - label: Points de données
-            value: 1203
-          - label: Trafic
-            value: 1000
+          - label: Apps cibles
+            value: 5
+          - label: Heures de scan
+            value: 480
 
     cta_btn:
       enable: true
-      label: Commencer
+      label: Demander un accès
       url: /contact/
       rel:
       target:
 
-  # Plan Medium
   - enable: true
     featured: true
     badge:
       enable: true
       label: Le plus populaire
-    name: Démarrage # Nom du plan de tarification.
-    description: Nostrud exercitation ullamco laboris nisi ut aliquip ex
+    name: Professional
+    description: Red teaming IA et playbooks étendus pour les organisations en croissance
 
     price:
-      # Détails des prix pour chaque type de plan.
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Mensuel
         prepend_value: $
-        value: 20
+        value: 1,500
         append_value:
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Annuel
         prepend_value: $
-        value: 40
+        value: 15,000
         append_value:
 
     features:
-      - Atelier de positionnement de marque en profondeur
-      - Analyse de la concurrence (5 principaux concurrents)
-      - Analyse de marché complète
-      - Insights sur les clients et segmentation
+      - "Flux de test **cartographiés vers MITRE ATT&CK**"
+      - "Tests **OWASP avancés** + vecteurs personnalisés"
+      - Tests d’infrastructure cloud
+      - "**20 applications** ou endpoints cibles"
+      - Tests d’API et de microservices
+      - Intégration Slack/Teams
+      - Rapports hebdomadaires + tableau de bord
+      - Support prioritaire (réponse 4-8 h)
 
     usages:
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Mensuel
         list:
-          - label: Points de données
-            value: 754
-          - label: Trafic
-            value: 850
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+          - label: Apps cibles
+            value: 20
+          - label: Heures de scan
+            value: 120
+      - type: Annuel
         list:
-          - label: Points de données
-            value: 1467
-          - label: Trafic
-            value: 1600
+          - label: Apps cibles
+            value: 20
+          - label: Heures de scan
+            value: 1440
 
     cta_btn:
       enable: true
-      label: Commencer
+      label: Demander un accès
       url: /contact/
       rel:
       target:
 
-  # Plan Pro
   - enable: true
     featured: false
     badge:
       enable: false
       label: Le plus populaire
-    name: Pro # Nom du plan de tarification.
-    description: Nostrud exercitation ullamco laboris nisi ut aliquip ex
+    name: Enterprise
+    description: Playbooks sur mesure pour les grandes organisations
 
     price:
-      # Détails des prix pour chaque type de plan.
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
-        prepend_value: $
-        value: 30
-        append_value:
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
-        prepend_value: $
-        value: 60
-        append_value:
+      - type: Mensuel
+        prepend_value: "Prix sur devis"
+        append_value: ""
+      - type: Annuel
+        prepend_value: "Prix sur devis"
+        append_value: ""
 
     features:
-      - Stratégie de positionnement de marque complète
-      - Analyse de la concurrence complète
-      - Analyse de marché avancée
-      - Insights sur les clients approfondis
+      - "**Scénarios d’attaque personnalisés** adaptés à votre infrastructure"
+      - "Simulations multi-étapes **lorsqu’elles sont dans le périmètre**"
+      - Tests multi-cloud (AWS, Azure, GCP)
+      - "**Cibles et applications illimitées**"
+      - Constats exportables et datés pour vos packs d’audit
+      - Intégrations personnalisées (SIEM, tickets)
+      - Alertes et suivi des jobs
+      - Ingénieur sécurité dédié + support prioritaire
 
     usages:
-      - type: Mensuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+      - type: Mensuel
         list:
-          - label: Points de données
-            value: 976
-          - label: Trafic
-            value: 1200
-      - type: Annuel # Type de plan (doit correspondre aux valeurs dans la section "plans" ci-dessus).
+          - label: Apps cibles
+            value: Illimité
+          - label: Heures de scan
+            value: 300
+      - type: Annuel
         list:
-          - label: Points de données
-            value: 2045
-          - label: Trafic
-            value: 2600
+          - label: Apps cibles
+            value: Illimité
+          - label: Heures de scan
+            value: 3600
 
     cta_btn:
       enable: true
-      label: Commencer
+      label: Contacter les ventes
       url: /contact/
       rel:
       target:
 
-# Comparaison des tarifs
 comparison:
-  - label: Fonctionnalités
+  - label: Référentiels
     list:
-      - value: Intégrations
+      - value: Tests OWASP Top 10
         included:
-          - true # Plan gratuit
-          - true # Plan Démarrage
-          - true # Plan Pro
-      - value: Liens partagés
+          - true
+          - true
+          - true
+      - value: Techniques MITRE ATT&CK
         included:
-          - true # Plan gratuit
-          - true # Plan Démarrage
-          - true # Plan Pro
-      - value: Importation et exportation
-        included:
-          - true # Plan gratuit
-          - true # Plan Démarrage
-          - true # Plan Pro
-      - value: Membres de l'équipe
+          - Cartographie de base
+          - Cartographie étendue
+          - Playbooks sur mesure
+      - value: Vecteurs personnalisés
         included:
           - false
-          - Jusqu'à 20 utilisateurs
-          - Jusqu'à 50 utilisateurs
-
-  - label: Rapports
-    list:
-      - value: Analytiques avancées
-        included:
-          - true # Plan gratuit
-          - true # Plan Démarrage
-          - true # Plan Pro
-      - value: Rapports de base
-        included:
-          - false # Plan gratuit
-          - true # Plan Démarrage
-          - true # Plan Pro
-      - value: Rapports professionnels
-        included:
-          - false # Plan gratuit
-          - false # Plan Démarrage
-          - true # Plan Pro
-      - value: Générateur de rapports personnalisés
+          - Limités
+          - Selon le périmètre
+      - value: Scénarios multi-étapes
         included:
           - false
           - false
           - true
+
+  - label: Surfaces
+    list:
+      - value: Applications web
+        included:
+          - true
+          - true
+          - true
+      - value: Tests d’API et de microservices
+        included:
+          - false
+          - true
+          - true
+      - value: Infrastructure cloud (AWS/Azure/GCP)
+        included:
+          - false
+          - Un cloud
+          - Multi-cloud
+      - value: Infrastructure réseau
+        included:
+          - false
+          - Limitée
+          - Selon le périmètre
+
+  - label: Intégrations et rapports
+    list:
+      - value: Rapports de sécurité
+        included:
+          - Mensuel
+          - Hebdomadaire
+          - Selon le contrat
+      - value: Intégration Slack/Teams
+        included:
+          - false
+          - true
+          - true
+      - value: Intégration SIEM
+        included:
+          - false
+          - false
+          - true
+      - value: Constats exportables et datés
+        included:
+          - false
+          - Basique
+          - Packs d’audit
 
   - label: Support
     list:
-      - value: Support en ligne 24/7
+      - value: Support e-mail
         included:
-          - true # Plan gratuit
-          - false # Plan Démarrage
-          - false # Plan Pro
-      - value: Ateliers de produits trimestriels
-        included:
-          - false # Plan gratuit
-          - false # Plan Démarrage
-          - true # Plan Pro
-      - value: Support téléphonique prioritaire
-        included:
-          - false # Plan gratuit
-          - false # Plan Démarrage
-          - true # Plan Pro
-      - value: Tour d'initiation 1:1
+          - Réponse 24-48 h
+          - Réponse 4-8 h
+          - Prioritaire
+      - value: Ingénieur sécurité dédié
         included:
           - false
           - false
           - true
+      - value: Formations et ateliers
+        included:
+          - false
+          - Trimestriel
+          - Mensuel
+      - value: Déploiement on-premise
+        included:
+          - false
+          - false
+          - Sur devis
 ---

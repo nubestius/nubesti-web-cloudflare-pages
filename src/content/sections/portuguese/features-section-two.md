@@ -1,18 +1,16 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-draft: false
-subtitle: Inteligência de Segurança
-title: Cobertura Completa <br /> de **Segurança Empresarial**
+enable: true
+subtitle: Alcance
+title: Superfícies que sabemos <br /> **testar**
 
 list:
-  - Agentes Autônomos
-  - MITRE ATT&CK
-  - OWASP Top 10
-  - Avaliação de Vulnerabilidades
-  - Detecção de Ameaças
-  - Auto-Remediação
-  - Priorização de Riscos
-  - Monitoramento em Tempo Real
-  - Relatórios de Conformidade
-  - Proteção Zero-Day
+  - Agentes autónomos
+  - Mapeamento MITRE ATT&CK
+  - Mapeamento OWASP Top 10
+  - Aplicações web
+  - APIs
+  - Ativos cloud no alcance
+  - Evidência e reteste
+  - Priorização de risco
+  - Relatórios datados
 ---

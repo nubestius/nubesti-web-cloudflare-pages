@@ -1,51 +1,19 @@
 ---
-title: "Precios de Seguridad Red Team IA"
-meta_description: "Elige el plan perfecto de Red Team IA para tu organización. Desde startups hasta empresas, ofrecemos pruebas integrales de ciberseguridad con precios transparentes."
+title: "Precios Red Team IA"
+meta_description: "Los planes públicos de Nubesti empiezan en 690 USD/mes (Starter) y 1.500 USD/mes (Professional). Enterprise es a medida. Los planes elegibles pueden incluir 14 días de prueba. El KYC de pago es obligatorio antes de las pruebas."
 draft: false
 ---
 
-## Precios Transparentes para Pruebas de Seguridad Impulsadas por IA
+## Precios
 
-Nuestra plataforma Red Team IA ofrece planes de precios flexibles diseñados para satisfacer las necesidades de seguridad de organizaciones de todos los tamaños. Cada plan incluye simulación avanzada de amenazas, evaluación de vulnerabilidades e informes integrales para fortalecer tu postura de ciberseguridad.
+Planes públicos:
 
-### Resumen de Precios
+- **Starter**: 690 USD/mes (o 6.900 USD/año)
+- **Professional**: 1.500 USD/mes (o 15.000 USD/año)
+- **Enterprise**: presupuesto a medida
 
-**Plan Starter**: Desde $690/mes
-Perfecto para equipos pequeños y startups que buscan implementar pruebas básicas de seguridad impulsadas por IA.
+Los planes elegibles pueden incluir una **prueba de 14 días**. El método de pago depende de la oferta. El KYC / verificación de pago es obligatorio antes de activar asientos o pruebas, y esa tarifa generalmente no se reembolsa.
 
-**Plan Professional**: Desde $1,500/mes  
-Ideal para organizaciones en crecimiento que necesitan simulación integral de amenazas e informes avanzados.
+Los flujos pueden mapearse a clases OWASP y a técnicas MITRE ATT&CK. Mapear no es haber ejecutado toda la matriz. Los hallazgos exportables con fecha pueden adjuntarse a *su* programa de auditoría. Nubesti no afirma certificación SOC 2 / ISO / PCI / HIPAA.
 
-**Plan Enterprise**: Precio personalizado
-Soluciones adaptadas para grandes empresas con requisitos de seguridad complejos y necesidades de pruebas ilimitadas.
-
-### Qué se Incluye en Todos los Planes
-
-- **Cumplimiento del Marco OWASP**: Pruebas integrales contra las vulnerabilidades del OWASP Top 10
-- **Integración MITRE ATT&CK**: Simulación de técnicas de ataque del mundo real
-- **Detección Automatizada de Vulnerabilidades**: Escaneo e identificación de amenazas impulsado por IA
-- **Informes Detallados de Seguridad**: Resúmenes ejecutivos y documentación técnica
-- **Soporte de Plataformas en la Nube**: Pruebas en los principales proveedores de nube
-- **Capacidades de Integración**: Conecta con tus herramientas de seguridad existentes
-
-### Complementos Empresariales
-
-**Paquetes de Cumplimiento Personalizados**: SOC 2, ISO 27001, PCI DSS, HIPAA
-Desde $500/mes
-
-**Ingeniero de Seguridad Dedicado**: Consultor de seguridad personal y soporte de implementación
-Desde $2,500/mes
-
-**Implementación On-Premise**: Instalación en nube privada o en el sitio
-Contacta ventas para precios
-
-**Inteligencia Avanzada de Amenazas**: Modelado personalizado de amenazas y escenarios de ataque específicos de la industria
-Desde $1,000/mes
-
-### Prueba Gratuita Disponible
-
-Comienza con una prueba gratuita de 14 días en cualquier plan. No se requiere tarjeta de crédito. Prueba hasta 3 aplicaciones y experimenta el poder de las pruebas de seguridad impulsadas por IA.
-
----
-
-*Todos los precios están en USD y se facturan según la frecuencia de tu plan seleccionado. Descuentos empresariales disponibles para compromisos anuales y contratos multi-anuales.*
+Complementos (ingeniero dedicado, on-premise, playbooks a medida): [alexis@nubesti.com](mailto:alexis@nubesti.com).

@@ -82,7 +82,7 @@ list:
         append_value:
 
     features:
-      - "**Full MITRE ATT&CK** framework coverage"
+      - "Testing workflows **mapped to MITRE ATT&CK** techniques"
       - "**Advanced OWASP** testing + custom attack vectors"
       - Cloud infrastructure security testing
       - "**20 target applications** or endpoints"
@@ -135,7 +135,7 @@ list:
       - "**Advanced persistent threat (APT)** simulations"
       - Multi-cloud security testing (AWS, Azure, GCP)
       - "**Unlimited targets** and applications"
-      - Compliance reporting (SOC 2, ISO 27001, PCI DSS)
+      - Exportable dated findings for your audit packs
       - Custom integrations (SIEM, ticketing systems)
       - Real-time monitoring and alerts
       - Dedicated security engineer + 24/7 support
@@ -172,9 +172,9 @@ comparison:
           - true # Enterprise Plan
       - value: MITRE ATT&CK Techniques
         included:
-          - Basic (50+ techniques) # Starter Plan
-          - Full (300+ techniques) # Professional Plan
-          - Custom + APT scenarios # Enterprise Plan
+          - Basic mapped techniques # Starter Plan
+          - Expanded mapped techniques # Professional Plan
+          - Custom scoped playbooks # Enterprise Plan
       - value: Custom Attack Vectors
         included:
           - false # Starter Plan
@@ -207,7 +207,7 @@ comparison:
         included:
           - false
           - Limited
-          - Full coverage
+          - In-scope custom
 
   - label: Integrations & Reporting
     list:
@@ -226,11 +226,11 @@ comparison:
           - false # Starter Plan
           - false # Professional Plan
           - true # Enterprise Plan
-      - value: Compliance Reports (SOC 2, ISO 27001)
+      - value: Exportable dated findings
         included:
           - false
           - Basic
-          - Full compliance
+          - Audit packs
 
   - label: Support & Services
     list:

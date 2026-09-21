@@ -3,50 +3,115 @@
 # Nubesti Web - https://nubesti.com
 # ===========================================
 # Format: /from /to [status]
+# Static files win over redirects. Retired legal markdown must stay deleted.
 
-# Sitemap redirect
+# Sitemap
 /sitemap.xml  /sitemap-index.xml  301
 
-# How it works → Demo redirect
-/how-it-works  /demo/  301
-/how-it-works/  /demo/  301
-
-# Legacy legal URLs → legal center
+# Retired legal pages → Legal Center
 /privacy-policy  /legal/privacy/  301
 /privacy-policy/  /legal/privacy/  301
+/privacy  /legal/privacy/  301
+/privacy/  /legal/privacy/  301
 /terms-conditions  /legal/terms/  301
 /terms-conditions/  /legal/terms/  301
+/terms  /legal/terms/  301
+/terms/  /legal/terms/  301
+/terms-of-service  /legal/terms/  301
+/terms-of-service/  /legal/terms/  301
 /security-policy  /legal/security/  301
 /security-policy/  /legal/security/  301
+/cookie-policy  /legal/cookies/  301
+/cookie-policy/  /legal/cookies/  301
+/cookies  /legal/cookies/  301
+/cookies/  /legal/cookies/  301
+/gdpr  /legal/privacy/  301
+/gdpr/  /legal/privacy/  301
+/refund-policy  /legal/refunds/  301
+/refund-policy/  /legal/refunds/  301
+/refunds  /legal/refunds/  301
+/refunds/  /legal/refunds/  301
+/dpa  /legal/dpa/  301
+/dpa/  /legal/dpa/  301
+/legal-notice  /legal/imprint/  301
+/legal-notice/  /legal/imprint/  301
+/imprint  /legal/imprint/  301
+/imprint/  /legal/imprint/  301
+/subprocessors  /legal/subprocessors/  301
+/subprocessors/  /legal/subprocessors/  301
+
 /en/privacy-policy  /legal/privacy/  301
 /en/privacy-policy/  /legal/privacy/  301
+/en/privacy  /legal/privacy/  301
+/en/privacy/  /legal/privacy/  301
 /en/terms-conditions  /legal/terms/  301
 /en/terms-conditions/  /legal/terms/  301
+/en/terms  /legal/terms/  301
+/en/terms/  /legal/terms/  301
 /en/security-policy  /legal/security/  301
 /en/security-policy/  /legal/security/  301
+/en/cookies  /legal/cookies/  301
+/en/cookies/  /legal/cookies/  301
+/en/gdpr  /legal/privacy/  301
+/en/gdpr/  /legal/privacy/  301
+/en/refund-policy  /legal/refunds/  301
+/en/refund-policy/  /legal/refunds/  301
+/en/dpa  /legal/dpa/  301
+/en/dpa/  /legal/dpa/  301
+
 /es/privacy-policy  /es/legal/privacy/  301
 /es/privacy-policy/  /es/legal/privacy/  301
+/es/privacy  /es/legal/privacy/  301
+/es/privacy/  /es/legal/privacy/  301
 /es/terms-conditions  /es/legal/terms/  301
 /es/terms-conditions/  /es/legal/terms/  301
+/es/terms  /es/legal/terms/  301
+/es/terms/  /es/legal/terms/  301
 /es/security-policy  /es/legal/security/  301
 /es/security-policy/  /es/legal/security/  301
+/es/cookies  /es/legal/cookies/  301
+/es/cookies/  /es/legal/cookies/  301
+/es/gdpr  /es/legal/privacy/  301
+/es/gdpr/  /es/legal/privacy/  301
+/es/refund-policy  /es/legal/refunds/  301
+/es/refund-policy/  /es/legal/refunds/  301
+/es/dpa  /es/legal/dpa/  301
+/es/dpa/  /es/legal/dpa/  301
+
 /fr/privacy-policy  /fr/legal/privacy/  301
 /fr/privacy-policy/  /fr/legal/privacy/  301
+/fr/privacy  /fr/legal/privacy/  301
+/fr/privacy/  /fr/legal/privacy/  301
 /fr/terms-conditions  /fr/legal/terms/  301
 /fr/terms-conditions/  /fr/legal/terms/  301
+/fr/terms  /fr/legal/terms/  301
+/fr/terms/  /fr/legal/terms/  301
 /fr/security-policy  /fr/legal/security/  301
 /fr/security-policy/  /fr/legal/security/  301
+/fr/cookies  /fr/legal/cookies/  301
+/fr/cookies/  /fr/legal/cookies/  301
+/fr/gdpr  /fr/legal/privacy/  301
+/fr/gdpr/  /fr/legal/privacy/  301
+/fr/refund-policy  /fr/legal/refunds/  301
+/fr/refund-policy/  /fr/legal/refunds/  301
+/fr/dpa  /fr/legal/dpa/  301
+/fr/dpa/  /fr/legal/dpa/  301
+
 /pt/privacy-policy  /pt/legal/privacy/  301
 /pt/privacy-policy/  /pt/legal/privacy/  301
+/pt/privacy  /pt/legal/privacy/  301
+/pt/privacy/  /pt/legal/privacy/  301
 /pt/terms-conditions  /pt/legal/terms/  301
 /pt/terms-conditions/  /pt/legal/terms/  301
+/pt/terms  /pt/legal/terms/  301
+/pt/terms/  /pt/legal/terms/  301
 /pt/security-policy  /pt/legal/security/  301
 /pt/security-policy/  /pt/legal/security/  301
-
-# WWW to non-WWW (handled by Cloudflare DNS, but backup here)
-# https://www.nubesti.com/*  https://nubesti.com/:splat  301
-
-# Language-specific redirects (if needed in future)
-# /es  /es/  301
-# /fr  /fr/  301
-# /pt  /pt/  301
+/pt/cookies  /pt/legal/cookies/  301
+/pt/cookies/  /pt/legal/cookies/  301
+/pt/gdpr  /pt/legal/privacy/  301
+/pt/gdpr/  /pt/legal/privacy/  301
+/pt/refund-policy  /pt/legal/refunds/  301
+/pt/refund-policy/  /pt/legal/refunds/  301
+/pt/dpa  /pt/legal/dpa/  301
+/pt/dpa/  /pt/legal/dpa/  301

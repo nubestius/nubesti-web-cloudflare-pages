@@ -1,56 +1,49 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-draft: false
-subtitle: Por que AI Red Team
-title: Revolucione a Segurança com <br /> **Inteligência Autônoma**
-layout_type: creative # creative / modern (default - creative)
+enable: true
+subtitle: Porque as equipas usam
+title: Testes repetíveis num <br /> **alcance autorizado**
+layout_type: creative
 
 list:
-  - title: Testes de Segurança Contínuos
+  - title: Testes de segurança contínuos
     image: "/images/why-us/1.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      Agentes autônomos alimentados por IA executam avaliações de segurança 24/7 para identificar vulnerabilidades antes dos atacantes, eliminando sobrecarga de testes manuais.
+      Os agentes podem repetir os mesmos playbooks autorizados no calendário que escolher, para fechar achados enquanto a alteração ainda está no sprint.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: Cobertura MITRE ATT&CK
+  - title: Mapeamento ATT&CK e OWASP
     image: "/images/why-us/2.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      Cobertura completa das táticas e técnicas do framework MITRE ATT&CK para simular cenários de ataque do mundo real com modelagem abrangente de ameaças.
+      Os fluxos podem mapear-se a técnicas MITRE ATT&CK e a classes OWASP. Mapear não significa ter executado a matriz inteira.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: Patches de Auto-Remediação
-    # image: ""
-    description_font_size: "" # sm | lg (default - sm)
+  - title: Evidência antes de uma janela de mudança
+    description_font_size: ""
     description: |
-      O mecanismo cognitivo gera automaticamente pull requests prontos para merge e patches de Infraestrutura como Código que resolvem descobertas antes que escalem.
+      Os achados devem incluir contexto técnico que um revisor possa aceitar ou rejeitar. Os patches em rascunho são um ponto de partida — não um merge automático.
     bounced_content:
       enable: true
       bg_image: "/images/why-us/3.png"
       list:
-        - Avaliação de Risco
-        - OWASP Top 10
-        - Scan de Vulnerabilidades
-        - Detecção de Ameaças
-        - Auto-Remediação
-        - MITRE ATT&CK
-        - Verificação de Conformidade
-        - Postura de Segurança
-        - Gerenciamento de Patches
-        - Proteção Zero-Day
-        - Pentesting
-        - Priorização de Riscos
-        - Validação de Exploits
-        - Inteligência de Segurança
+        - Alcance autorizado
+        - Mapeamento OWASP
+        - Testes de vulnerabilidades
+        - Validação de exploit
+        - Evidência
+        - Mapeamento MITRE ATT&CK
+        - Reteste
+        - Priorização de risco
+        - Remediações em rascunho
     cta_btn:
       enable: false
       label: ""

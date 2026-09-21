@@ -5,7 +5,7 @@ title: AI-Powered **Cybersecurity** Testing Platform
 layout_type: modern # creative / modern
 
 list:
-  - title: Autonomous AI agents conduct 24/7 security testing using MITRE ATT&CK framework and OWASP methodologies
+  - title: After KYC and authorization, agents can run scheduled playbooks mapped to ATT&CK and OWASP
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/4.png"
     description_font_size: "" # sm | lg (default - sm)
@@ -16,7 +16,7 @@ list:
       url: /contact/
       rel: ""
       target: ""
-  - title: Comprehensive threat simulation including Advanced Persistent Threats (APT) and real-world attack scenarios
+  - title: Playbooks can include multi-stage scenarios when they are in scope — not a claim of universal APT coverage
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/5.png"
     description_font_size: "" # sm | lg (default - sm)
@@ -27,7 +27,7 @@ list:
       url: /pricing/
       rel: ""
       target: ""
-  - title: Multi-cloud security testing **for AWS, Azure, and Google Cloud** with compliance reporting for SOC 2, ISO 27001, and PCI DSS
+  - title: Multi-cloud testing **for AWS, Azure, and Google Cloud** assets you authorize — with exportable findings for your own audit packs
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/6.png"
     description_font_size: "" # sm | lg (default - sm)

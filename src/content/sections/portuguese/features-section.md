@@ -1,14 +1,13 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-draft: false
-subtitle: Capacidades Principais
-title: Testes Avançados de Red Team **com IA em Escala**
+enable: true
+subtitle: Capacidades
+title: Para que a plataforma **foi feita**
 
 list:
-  - title: Testes Autônomos
-    description: Agentes alimentados por IA executam avaliações de segurança contínuas 24/7, modelando cada camada desde o código-fonte até a infraestrutura em nuvem sem intervenção manual.
-  - title: MITRE ATT&CK & OWASP
-    description: Cobertura completa das táticas do framework MITRE ATT&CK e testes abrangentes de vulnerabilidades OWASP Top 10 com precisão cirúrgica.
-  - title: Redução Avançada de Falsos Positivos
-    description: Mecanismo cognitivo avançado valida descobertas e atribui Índice de Risco contextual (0-10) baseado em explorabilidade, criticidade do ativo e raio de explosão.
+  - title: Testes autónomos
+    description: Após KYC e autorização, os agentes podem executar avaliações agendadas nos ativos que designar.
+  - title: Mapeamento ATT&CK e OWASP
+    description: Fluxos mapeados para técnicas MITRE ATT&CK e classes OWASP. O relatório deve mostrar quais controlos correram.
+  - title: Menos ruído de scanner
+    description: Os achados são validados com explorabilidade e evidência. Não afirmamos zero falsos positivos.
 ---

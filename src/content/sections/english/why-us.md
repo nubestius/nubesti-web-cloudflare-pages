@@ -1,55 +1,49 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: Why AI Red Team
-title: Revolutionize Security with <br /> **Autonomous Intelligence**
-layout_type: creative # creative / modern (default - creative)
+enable: true
+subtitle: Why teams use it
+title: Repeatable tests on an <br /> **authorized scope**
+layout_type: creative
 
 list:
-  - title: Continuous Security Testing
+  - title: Continuous security testing
     image: "/images/why-us/1.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      AI-powered autonomous agents run 24/7 security assessments to identify vulnerabilities before attackers do, eliminating manual testing overhead.
+      Agents can replay the same authorized playbooks on a schedule you choose, so findings show up while the change is still in the sprint — not only at the next quarterly pentest.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: MITRE ATT&CK Coverage
+  - title: ATT&CK and OWASP mapping
     image: "/images/why-us/2.png"
-    description_font_size: "" # sm | lg (default - sm)
+    description_font_size: ""
     description: |
-      Full coverage of MITRE ATT&CK framework tactics and techniques to simulate real-world attack scenarios with comprehensive threat modeling.
+      Testing workflows can be mapped to MITRE ATT&CK techniques and OWASP risk classes. Mapping is not a claim that every technique in the matrix was executed.
     cta_btn:
       enable: false
       label: ""
       url: ""
       rel: ""
       target: ""
-  - title: Auto-Remediation Patches
-    # image: ""
-    description_font_size: "" # sm | lg (default - sm)
+  - title: Evidence before a change window
+    description_font_size: ""
     description: |
-      Cognitive engine automatically generates merge-ready pull requests and Infrastructure-as-Code patches that resolve findings before they escalate.
+      Findings are meant to include technical context a reviewer can accept or reject. Draft fixes, when offered, are a starting point — not an automatic merge.
     bounced_content:
       enable: true
       bg_image: "/images/why-us/3.png"
       list:
-        - Risk Assessment
-        - OWASP Top 10
-        - Vulnerability Scan
-        - Threat Detection
-        - Auto-Remediation
-        - MITRE ATT&CK
-        - Compliance Check
-        - Security Posture
-        - Patch Management
-        - Zero-Day Protection
-        - Pentesting
-        - Risk Prioritization
-        - Exploit Validation
-        - Security Intelligence
+        - Authorized scope
+        - OWASP mapping
+        - Vulnerability tests
+        - Exploit validation
+        - Evidence
+        - MITRE ATT&CK mapping
+        - Retest
+        - Risk prioritization
+        - Draft remediations
     cta_btn:
       enable: false
       label: ""

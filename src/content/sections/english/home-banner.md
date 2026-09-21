@@ -1,44 +1,20 @@
 ---
-title: "AI-Powered Cybersecurity Agent"
-description: Our AI-powered cybersecurity agent leverages MITRE ATT&CK and OWASP frameworks to continuously identify, validate, and prioritize vulnerabilities with surgical precision — significantly reducing false positives while automatically generating patches before threats escalate.
+title: "Autonomous security testing"
+description: Continuous offensive tests against assets you authorize — with evidence, a stop control, and a retest after you patch. Paid KYC is required before tests launch.
 image: "/images/nubesti-ai-red-team-dashboard.png"
 buttons:
   - enable: true
-    label: "Book a Demo"
-    url: "https://meetings.hubspot.com/alexis307"
+    label: "Start testing"
+    url: "https://app.nubesti.com"
     rel: ""
     target: "_blank"
   - enable: true
-    label: "How it works"
-    type: "video"
-    video:
-      src: "supademo:cmejoymuu0e7p5gz32dcatf9l" # custom marker for Supademo
-      provider: supademo # custom provider handled in VideoModal
-      autoplay: false
-      id: home-banner-video
+    label: "See how it works"
+    url: "#how-it-works"
+    rel: ""
+    target: ""
 
-# Optional: uncomment if you want to override default `src/content/sections/english/customers.md` content
 customers:
-  enable: true # Control the visibility of this section across all pages where it is used
-  description: "Trusted By Enterprise Security Teams"
-
-  # marquee:
-  #   element_width:
-  #   element_width_auto:
-  #   element_width_in_small_devices:
-  #   pause_on_hover: false
-  #   reverse: "" # reverse / ""
-  #   duration: "20s"
-
-  # list:
-  #   - src: "/images/customers/1.png"
-  #     alt: "Quotient"
-  #   - src: "/images/customers/2.png"
-  #     alt: "Catalog"
-  #   - src: "/images/customers/3.png"
-  #     alt: "Sisphus"
-  #   - src: "/images/customers/4.png"
-  #     alt: "Hourglass"
-  #   - src: "/images/customers/5.png"
-  #     alt: "Layers"
+  enable: false
+  description: ""
 ---

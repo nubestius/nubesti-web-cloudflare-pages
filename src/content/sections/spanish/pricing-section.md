@@ -82,7 +82,7 @@ list:
         append_value:
 
     features:
-      - "Cobertura completa del framework **MITRE ATT&CK**"
+      - "Flujos de prueba **mapeados a MITRE ATT&CK**"
       - "Pruebas **OWASP avanzadas** + vectores de ataque personalizados"
       - Pruebas de seguridad de infraestructura en la nube
       - "**20 aplicaciones** o endpoints objetivo"
@@ -135,7 +135,7 @@ list:
       - "Simulaciones de **amenazas persistentes avanzadas (APT)**"
       - Pruebas de seguridad multi-nube (AWS, Azure, GCP)
       - "**Objetivos y aplicaciones ilimitados**"
-      - Informes de cumplimiento (SOC 2, ISO 27001, PCI DSS)
+      - Hallazgos exportables con fecha para sus auditorías
       - Integraciones personalizadas (SIEM, sistemas de tickets)
       - Monitoreo y alertas en tiempo real
       - Ingeniero de seguridad dedicado + soporte 24/7
@@ -172,9 +172,9 @@ comparison:
           - true # Enterprise Plan
       - value: Técnicas MITRE ATT&CK
         included:
-          - Básico (50+ técnicas) # Starter Plan
-          - Completo (300+ técnicas) # Professional Plan
-          - Personalizado + escenarios APT # Enterprise Plan
+          - Técnicas mapeadas básicas # Starter Plan
+          - Mapeo ampliado # Professional Plan
+          - Playbooks a medida # Enterprise Plan
       - value: Vectores de Ataque Personalizados
         included:
           - false # Starter Plan
@@ -207,7 +207,7 @@ comparison:
         included:
           - false
           - Limitado
-          - Cobertura completa
+          - Según alcance
 
   - label: Integraciones e Informes
     list:
@@ -226,11 +226,11 @@ comparison:
           - false # Starter Plan
           - false # Professional Plan
           - true # Enterprise Plan
-      - value: Informes de Cumplimiento (SOC 2, ISO 27001)
+      - value: Hallazgos exportables con fecha
         included:
           - false
           - Básico
-          - Cumplimiento completo
+          - Packs de auditoría
 
   - label: Soporte y Servicios
     list:

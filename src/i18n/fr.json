@@ -6,24 +6,23 @@
     "learn_more_about": "En savoir plus",
     "email_placeholder": "Adresse e-mail",
     "pagination_next": "Suivant",
-    "pagination_previous": "Pr c dent"
+    "pagination_previous": "Précédent"
   },
   "navigation": {
-    "button_label": "Se connecter"
-  },
-  "integration": {
-    "related_integration_section_title": "Vous pourriez  tre **int ress  par**",
-    "back_to_integration": "Parcourir"
+    "button_label": "Connexion"
   },
   "subscription": {
-    "label": "Abonnez-vous à notre newsletter pour obtenir les dernières mises"
+    "label": "Notes produit"
+  },
+  "integration": {
+    "related_integration_section_title": "Connecteurs **liés**",
+    "back_to_integration": "Parcourir"
   },
   "footer": {
-    "quick_links": "Liens rapides",
+    "quick_links": "Produit",
     "legal": "Juridique",
-    "resources": "Ressources",
-    "description": "Nubesti est une plateforme de cybersécurité de pointe qui exploite l'intelligence artificielle pour fournir des opérations complètes de red team. Notre mission est de révolutionner la sécurité d'entreprise grâce aux tests autonomes alimentés par l'IA et à la simulation avancée de menaces.",
-    "copyright": "Droits d'auteur {{ year }} / Tous droits réservés par Nubesti",
-    "_comment": "We kindly appreciate it if you retain the theme copyright. Thank you for supporting Getastrothemes!"
+    "resources": "Confiance",
+    "description": "Nubesti LLC fournit des tests de sécurité autonomes et continus sur des actifs autorisés. Les tests exigent un KYC payant.",
+    "copyright": "© {{ year }} Nubesti LLC / Tous droits réservés"
   }
 }

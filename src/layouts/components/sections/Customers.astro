@@ -36,12 +36,12 @@ let {
 
 const { class: className, width = "sm", ...rest } = Astro.props;
 
-let duplicatedList = list;
+let duplicatedList = list || [];
 
 // If list length is less then 3 then duplicate the list at at least 3 times
-if (list.length <= 3) {
+if (duplicatedList.length <= 3) {
   Array.from({ length: 3 }, () => [...list]).flat();
-} else if (list.length > 3) {
+} else if (duplicatedList.length > 3) {
   Array.from({ length: 2 }, () => [...list]).flat();
 }
 ---

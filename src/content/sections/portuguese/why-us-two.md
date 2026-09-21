@@ -6,7 +6,7 @@ title: Plataforma de Testes de **Cibersegurança** Alimentada por IA
 layout_type: modern # creative / modern
 
 list:
-  - title: Agentes de IA autônomos conduzem testes de segurança 24/7 usando o framework MITRE ATT&CK e metodologias OWASP
+  - title: Após KYC e autorização, os agentes podem executar playbooks agendados mapeados a ATT&CK e OWASP
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/4.png"
     description_font_size: "" # sm | lg (default - sm)
@@ -17,7 +17,7 @@ list:
       url: /contact/
       rel: ""
       target: ""
-  - title: Simulação abrangente de ameaças incluindo Ameaças Persistentes Avançadas (APT) e cenários de ataque do mundo real
+  - title: Os playbooks podem incluir cenários em várias etapas quando estão no alcance — não é cobertura APT universal
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/5.png"
     description_font_size: "" # sm | lg (default - sm)
@@ -28,7 +28,7 @@ list:
       url: /pricing/
       rel: ""
       target: ""
-  - title: Testes de segurança multi-nuvem **para AWS, Azure e Google Cloud** com relatórios de conformidade para SOC 2, ISO 27001 e PCI DSS
+  - title: Testes multi-nuvem **para AWS, Azure e Google Cloud** em ativos que autoriza — com achados exportáveis para a *sua* auditoria
     title_size: sm # sm | md (default - md)
     image: "/images/why-us/6.png"
     description_font_size: "" # sm | lg (default - sm)
