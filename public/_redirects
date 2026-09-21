@@ -11,6 +11,38 @@
 /how-it-works  /demo/  301
 /how-it-works/  /demo/  301
 
+# Legacy legal URLs → legal center
+/privacy-policy  /legal/privacy/  301
+/privacy-policy/  /legal/privacy/  301
+/terms-conditions  /legal/terms/  301
+/terms-conditions/  /legal/terms/  301
+/security-policy  /legal/security/  301
+/security-policy/  /legal/security/  301
+/en/privacy-policy  /legal/privacy/  301
+/en/privacy-policy/  /legal/privacy/  301
+/en/terms-conditions  /legal/terms/  301
+/en/terms-conditions/  /legal/terms/  301
+/en/security-policy  /legal/security/  301
+/en/security-policy/  /legal/security/  301
+/es/privacy-policy  /es/legal/privacy/  301
+/es/privacy-policy/  /es/legal/privacy/  301
+/es/terms-conditions  /es/legal/terms/  301
+/es/terms-conditions/  /es/legal/terms/  301
+/es/security-policy  /es/legal/security/  301
+/es/security-policy/  /es/legal/security/  301
+/fr/privacy-policy  /fr/legal/privacy/  301
+/fr/privacy-policy/  /fr/legal/privacy/  301
+/fr/terms-conditions  /fr/legal/terms/  301
+/fr/terms-conditions/  /fr/legal/terms/  301
+/fr/security-policy  /fr/legal/security/  301
+/fr/security-policy/  /fr/legal/security/  301
+/pt/privacy-policy  /pt/legal/privacy/  301
+/pt/privacy-policy/  /pt/legal/privacy/  301
+/pt/terms-conditions  /pt/legal/terms/  301
+/pt/terms-conditions/  /pt/legal/terms/  301
+/pt/security-policy  /pt/legal/security/  301
+/pt/security-policy/  /pt/legal/security/  301
+
 # WWW to non-WWW (handled by Cloudflare DNS, but backup here)
 # https://www.nubesti.com/*  https://nubesti.com/:splat  301
 

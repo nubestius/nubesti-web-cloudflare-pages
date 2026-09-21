@@ -116,15 +116,21 @@
   "footer_menu": [
     {
       "enable": true,
-      "name": "Conditions g n rales",
-      "url": "/terms-conditions/",
+      "name": "Mentions légales",
+      "url": "/legal/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Politique de confidentialit ",
-      "url": "/privacy-policy/",
-      "weight": 0
+      "name": "Confidentialité",
+      "url": "/legal/privacy/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Imprint",
+      "url": "/legal/imprint/",
+      "weight": 2
     }
   ],
   "footer_menu_quick_link": [
@@ -170,15 +176,33 @@
   "footer_menu_legal": [
     {
       "enable": true,
-      "name": "Conditions g n rales",
-      "url": "/terms-conditions/",
+      "name": "Centre juridique",
+      "url": "/legal/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Politique de confidentialit ",
-      "url": "/privacy-policy/",
-      "weight": 0
+      "name": "Conditions d’utilisation",
+      "url": "/legal/terms/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Confidentialité",
+      "url": "/legal/privacy/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Sécurité",
+      "url": "/legal/security/",
+      "weight": 3
+    },
+    {
+      "enable": true,
+      "name": "Mentions légales",
+      "url": "/legal/imprint/",
+      "weight": 4
     }
   ]
 }

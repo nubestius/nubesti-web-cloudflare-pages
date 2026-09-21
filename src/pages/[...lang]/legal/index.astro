@@ -1,0 +1,125 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getLocaleUrlCTM, generatePaths } from "@/lib/utils/languageParser.ts";
+import {
+  LEGAL_UPDATED,
+  formatLegalDate,
+  getLegalCatalog,
+  getLegalHubCopy,
+  legalCompany,
+} from "@/lib/legal";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const locale = Astro.currentLocale || "en";
+const copy = getLegalHubCopy(locale);
+const documents = getLegalCatalog(locale);
+const updated = formatLegalDate(LEGAL_UPDATED, locale);
+const homeUrl = getLocaleUrlCTM("/", locale);
+const legalUrl = getLocaleUrlCTM("/legal/", locale);
+---
+
+<Base
+  title={copy.breadcrumb}
+  meta_title={`${copy.breadcrumb} — Nubesti`}
+  meta_description={copy.intro}
+  disable_tagline={true}
+  sectionSpacing="md">
+  <section class="legal-hub">
+    <div class="container">
+      <nav
+        class="text-sm tracking-[0.16em] uppercase opacity-60"
+        aria-label="Breadcrumb">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a class="hover:text-light hover:opacity-100" href={homeUrl}>
+              {copy.home}
+            </a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li class="text-light opacity-100">{copy.breadcrumb}</li>
+        </ol>
+      </nav>
+
+      <p
+        class="text-secondary mt-10 text-sm font-medium tracking-[0.22em] uppercase">
+        {copy.eyebrow}
+      </p>
+      <h1
+        class="font-secondary text-light mt-4 max-w-4xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+        {copy.title}
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg opacity-80">{copy.intro}</p>
+
+      <div
+        class="border-white/10 bg-white/[0.04] mt-10 inline-flex max-w-full flex-wrap items-center gap-x-3 gap-y-2 rounded-full border px-5 py-3 text-sm">
+        <span class="text-light font-medium">{legalCompany.name}</span>
+        <span class="opacity-40" aria-hidden="true">·</span>
+        <span class="opacity-75">{legalCompany.addressInline}</span>
+        <span class="opacity-40" aria-hidden="true">·</span>
+        <a
+          class="text-secondary hover:underline"
+          href={`mailto:${legalCompany.email}`}>
+          {legalCompany.email}
+        </a>
+      </div>
+
+      <div class="mt-16 grid gap-5 md:grid-cols-2">
+        {
+          documents.map((doc) => (
+            <a
+              href={getLocaleUrlCTM(`/legal/${doc.slug}/`, locale)}
+              class="legal-card group border-white/10 bg-white/[0.035] hover:border-primary/40 hover:bg-white/[0.055] relative flex min-h-[220px] flex-col rounded-3xl border p-7 transition-colors duration-300">
+              <p class="text-xs tracking-[0.18em] uppercase opacity-50">
+                {copy.last_updated} {updated}
+              </p>
+              <h2 class="font-secondary text-light mt-5 text-2xl">
+                {doc.title}
+              </h2>
+              <p class="mt-3 flex-1 text-[0.975rem] leading-relaxed opacity-75">
+                {doc.summary}
+              </p>
+              <span
+                class="bg-white/10 group-hover:bg-primary mt-6 inline-flex h-9 w-9 items-center justify-center rounded-full text-lg transition-colors"
+                aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${copy.breadcrumb} — Nubesti`,
+    description: copy.intro,
+    url: new URL(legalUrl, Astro.site || "https://nubesti.com").href,
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Nubesti",
+      url: "https://nubesti.com",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: copy.home,
+          item: new URL(homeUrl, "https://nubesti.com").href,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: copy.breadcrumb,
+          item: new URL(legalUrl, "https://nubesti.com").href,
+        },
+      ],
+    },
+  })} />
+</Base>

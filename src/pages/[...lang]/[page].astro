@@ -19,6 +19,15 @@ export async function getStaticPaths() {
         config.settings.multilingual;
 
       let pages = await getCollectionCTM("pages", lang.languageCode);
+      const retiredLegalSlugs = new Set([
+        "privacy-policy",
+        "terms-conditions",
+        "security-policy",
+      ]);
+      pages = pages.filter((page) => {
+        const slug = page.data?.custom_slug || page.slug.split("/").pop();
+        return !retiredLegalSlugs.has(slug || "");
+      });
 
       return pages.map((page) => ({
         params: {

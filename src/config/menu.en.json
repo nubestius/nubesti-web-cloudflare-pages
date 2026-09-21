@@ -110,15 +110,21 @@
   "footer_menu": [
     {
       "enable": true,
-      "name": "Terms & Conditions",
-      "url": "/terms-conditions/",
+      "name": "Legal",
+      "url": "/legal/",
       "weight": 0
     },
     {
       "enable": true,
-      "name": "Privacy & Policy",
-      "url": "/privacy-policy/",
-      "weight": 0
+      "name": "Privacy Policy",
+      "url": "/legal/privacy/",
+      "weight": 1
+    },
+    {
+      "enable": true,
+      "name": "Legal Notice",
+      "url": "/legal/imprint/",
+      "weight": 2
     }
   ],
   "footer_menu_quick_link": [
@@ -164,15 +170,33 @@
   "footer_menu_legal": [
     {
       "enable": true,
-      "name": "Terms of Conditions",
-      "url": "/terms-conditions/",
+      "name": "Legal center",
+      "url": "/legal/",
       "weight": 0
     },
     {
       "enable": true,
+      "name": "Terms of Service",
+      "url": "/legal/terms/",
+      "weight": 1
+    },
+    {
+      "enable": true,
       "name": "Privacy Policy",
-      "url": "/privacy-policy/",
-      "weight": 0
+      "url": "/legal/privacy/",
+      "weight": 2
+    },
+    {
+      "enable": true,
+      "name": "Security",
+      "url": "/legal/security/",
+      "weight": 3
+    },
+    {
+      "enable": true,
+      "name": "Legal Notice",
+      "url": "/legal/imprint/",
+      "weight": 4
     }
   ]
 }

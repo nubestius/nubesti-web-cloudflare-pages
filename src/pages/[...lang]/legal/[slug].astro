@@ -1,0 +1,171 @@
+---
+import Base from "@/layouts/Base.astro";
+import LegalCompanyCard from "@/layouts/components/legal/LegalCompanyCard.astro";
+import {
+  supportedLanguages,
+  getLocaleUrlCTM,
+} from "@/lib/utils/languageParser.ts";
+import parseTomlToJson from "@/lib/utils/parseTomlToJson";
+import {
+  LEGAL_SLUGS,
+  LEGAL_UPDATED,
+  extractLegalToc,
+  formatLegalDate,
+  getLegalDocument,
+  getLegalHubCopy,
+  renderLegalMarkdown,
+} from "@/lib/legal";
+
+export function getStaticPaths() {
+  const config = parseTomlToJson("./src/config/config.toml");
+  const { default_language, show_default_lang_in_url } =
+    config.settings.multilingual;
+
+  return supportedLanguages.flatMap((lang) =>
+    LEGAL_SLUGS.map((slug) => ({
+      params: {
+        lang:
+          lang.languageCode === default_language && !show_default_lang_in_url
+            ? undefined
+            : lang.languageCode,
+        slug,
+      },
+      props: {
+        locale: lang.languageCode,
+        slug,
+      },
+    })),
+  );
+}
+
+const locale = (Astro.props.locale as string) || Astro.currentLocale || "en";
+const document = getLegalDocument(Astro.params.slug || "", locale);
+
+if (!document) {
+  throw new Error(`Legal document not found: ${Astro.params.slug}`);
+}
+
+const copy = getLegalHubCopy(locale);
+const updated = formatLegalDate(LEGAL_UPDATED, locale);
+const toc = extractLegalToc(document.body);
+const html = renderLegalMarkdown(document.body, locale);
+const homeUrl = getLocaleUrlCTM("/", locale);
+const legalUrl = getLocaleUrlCTM("/legal/", locale);
+const pageUrl = getLocaleUrlCTM(`/legal/${document.slug}/`, locale);
+---
+
+<Base
+  title={document.title}
+  meta_title={`${document.title} — Nubesti`}
+  meta_description={document.meta_description}
+  disable_tagline={true}
+  sectionSpacing="md">
+  <article class="legal-document">
+    <div class="container">
+      <nav
+        class="text-sm tracking-[0.16em] uppercase opacity-60"
+        aria-label="Breadcrumb">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a class="hover:text-light" href={homeUrl}>{copy.home}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a class="hover:text-light" href={legalUrl}>{copy.breadcrumb}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li class="text-light opacity-100">{document.title}</li>
+        </ol>
+      </nav>
+
+      <header class="mt-10 max-w-3xl">
+        <h1
+          class="font-secondary text-light text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+          {document.title}
+        </h1>
+        <p class="mt-5 text-lg opacity-80">{document.summary}</p>
+        <p class="mt-4 text-sm opacity-55">
+          {copy.last_updated}: {updated}
+        </p>
+      </header>
+
+      <div class="mt-14 grid gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <aside class="lg:sticky lg:top-28 lg:self-start">
+          <LegalCompanyCard />
+          {
+            toc.length > 0 && (
+              <nav class="mt-8" aria-label={copy.on_this_page}>
+                <p class="text-xs tracking-[0.18em] uppercase opacity-50">
+                  {copy.on_this_page}
+                </p>
+                <ol class="mt-4 space-y-2.5 text-sm">
+                  {toc.map((item, index) => (
+                    <li>
+                      <a
+                        class="hover:text-light inline-flex gap-2 opacity-75 transition-colors hover:opacity-100"
+                        href={`#${item.slug}`}>
+                        <span class="text-secondary/80 tabular-nums">
+                          {index + 1}.
+                        </span>
+                        <span>{item.text.replace(/^\d+\.\s*/, "")}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )
+          }
+        </aside>
+
+        <div class="min-w-0">
+          <div class="prose-styles legal-prose max-w-3xl" set:html={html} />
+          <p class="mt-16">
+            <a
+              class="text-secondary inline-flex items-center gap-2 text-sm hover:underline"
+              href={legalUrl}>
+              {copy.back}
+              <span aria-hidden="true">↗</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: document.title,
+    description: document.meta_description,
+    dateModified: LEGAL_UPDATED,
+    url: new URL(pageUrl, "https://nubesti.com").href,
+    publisher: {
+      "@type": "Organization",
+      name: "Nubesti LLC",
+      url: "https://nubesti.com",
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: copy.home,
+          item: new URL(homeUrl, "https://nubesti.com").href,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: copy.breadcrumb,
+          item: new URL(legalUrl, "https://nubesti.com").href,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: document.title,
+          item: new URL(pageUrl, "https://nubesti.com").href,
+        },
+      ],
+    },
+  })} />
+</Base>

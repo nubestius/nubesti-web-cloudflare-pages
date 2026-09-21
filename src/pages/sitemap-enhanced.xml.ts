@@ -55,23 +55,36 @@ export const GET: APIRoute = ({ site }) => {
     { url: 'es/faq/', changefreq: 'monthly', priority: '0.6' },
     { url: 'fr/faq/', changefreq: 'monthly', priority: '0.6' },
     
-    // Legal pages
-    { url: 'privacy-policy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'terms-conditions/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'security-policy/', changefreq: 'monthly', priority: '0.5' },
-    
-    // Legal pages in all languages
-    { url: 'en/privacy-policy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'es/privacy-policy/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'fr/privacy-policy/', changefreq: 'yearly', priority: '0.3' },
-    
-    { url: 'en/terms-conditions/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'es/terms-conditions/', changefreq: 'yearly', priority: '0.3' },
-    { url: 'fr/terms-conditions/', changefreq: 'yearly', priority: '0.3' },
-    
-    { url: 'en/security-policy/', changefreq: 'monthly', priority: '0.5' },
-    { url: 'es/security-policy/', changefreq: 'monthly', priority: '0.5' },
-    { url: 'fr/security-policy/', changefreq: 'monthly', priority: '0.5' },
+    // Legal center
+    { url: 'legal/', changefreq: 'yearly', priority: '0.4' },
+    { url: 'legal/terms/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/privacy/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/cookies/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/acceptable-use/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/refunds/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/dmca/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/sla/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/dpa/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/subprocessors/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/security/', changefreq: 'monthly', priority: '0.5' },
+    { url: 'legal/billing/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/engagement/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/accessibility/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/ethics/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'legal/imprint/', changefreq: 'yearly', priority: '0.3' },
+
+    { url: 'es/legal/', changefreq: 'yearly', priority: '0.4' },
+    { url: 'fr/legal/', changefreq: 'yearly', priority: '0.4' },
+    { url: 'pt/legal/', changefreq: 'yearly', priority: '0.4' },
+    { url: 'es/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'fr/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'pt/legal/privacy/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'es/legal/terms/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'fr/legal/terms/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'pt/legal/terms/', changefreq: 'yearly', priority: '0.3' },
+    { url: 'es/legal/security/', changefreq: 'monthly', priority: '0.5' },
+    { url: 'fr/legal/security/', changefreq: 'monthly', priority: '0.5' },
+    { url: 'pt/legal/security/', changefreq: 'monthly', priority: '0.5' },
   ];
   
   const currentDate = new Date().toISOString().split('T')[0];

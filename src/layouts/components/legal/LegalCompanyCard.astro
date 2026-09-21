@@ -1,0 +1,26 @@
+---
+import { legalCompany } from "@/lib/legal";
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<div
+  class:list={[
+    "border-white/10 bg-white/[0.04] rounded-3xl border",
+    compact ? "px-5 py-4" : "p-6",
+  ]}>
+  <p class="font-secondary text-light text-lg">{legalCompany.name}</p>
+  <p class="mt-3 text-sm leading-relaxed opacity-80">
+    {legalCompany.addressLines[0]}<br />
+    {legalCompany.addressLines[1]}
+  </p>
+  <a
+    class="text-secondary mt-4 inline-block text-sm underline-offset-2 hover:underline"
+    href={`mailto:${legalCompany.email}`}>
+    {legalCompany.email}
+  </a>
+</div>

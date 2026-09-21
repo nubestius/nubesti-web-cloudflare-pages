@@ -458,3 +458,16 @@ footer {
 .video-player:empty {
   @apply h-96 bg-black;
 }
+
+.legal-hub,
+.legal-document {
+  @apply pb-24 pt-10 lg:pb-32 lg:pt-14;
+}
+
+.legal-prose {
+  @apply text-base lg:text-[1.05rem];
+}
+
+.legal-prose table {
+  @apply text-sm;
+}
