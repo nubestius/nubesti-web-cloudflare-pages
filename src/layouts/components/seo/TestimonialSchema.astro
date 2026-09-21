@@ -38,27 +38,24 @@ if (!testimonialData) {
 // Fallback testimonials for schema
 const defaultTestimonials = [
   {
-    content: "The autonomous AI Red Team platform completely transformed our security posture. We now identify and remediate vulnerabilities 10x faster than traditional methods, with minimal false positives disrupting our operations.",
+    content: "We used to wait for a quarterly pentest to know if a change was safe. Nubesti runs the same playbooks every week, so we close findings while the code is still in the sprint.",
     customer: {
       name: "Carlos Rodriguez",
-      role: "CISO at Tecnoayudas",
-      image: "/images/customers/avatar/1.jpg"
+      role: "CISO at Tecnoayudas"
     }
   },
   {
-    content: "Our security team was overwhelmed with manual testing until we implemented this AI-powered solution. The MITRE ATT&CK framework integration provides comprehensive coverage we never had before.",
+    content: "Mapping coverage by hand against MITRE ATT&CK took days and still left holes. The agents walk the tactics we care about and show us, in the report, which techniques never fired.",
     customer: {
-      name: "Miguel Santos", 
-      role: "Head of Security at Escala",
-      image: "/images/customers/avatar/2.jpg"
+      name: "Miguel Santos",
+      role: "Head of Security at Escala"
     }
   },
   {
-    content: "The continuous security testing capabilities have given us confidence in our infrastructure. We catch critical vulnerabilities before they become incidents, saving us millions in potential breach costs.",
+    content: "Hosting customers notice downtime. We keep tests on staging first, then promote a thin production scope.",
     customer: {
       name: "Luis Martinez",
-      role: "Security Director at Hostiva", 
-      image: "/images/customers/avatar/3.jpg"
+      role: "Security Director at Hostiva"
     }
   }
 ];
@@ -76,7 +73,6 @@ const reviewSchemas = allTestimonials.filter((testimonial: any) => testimonial.e
     "@type": "Person",
     "name": testimonial.customer?.name || `Customer ${index + 1}`,
     "jobTitle": testimonial.customer?.role || "Security Professional",
-    "image": testimonial.customer?.image ? `${baseUrl}${testimonial.customer.image}` : undefined,
     "worksFor": {
       "@type": "Organization",
       "name": testimonial.customer?.role?.includes('at ') ? 

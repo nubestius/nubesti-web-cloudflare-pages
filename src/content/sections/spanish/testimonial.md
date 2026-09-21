@@ -1,71 +1,63 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: Testimonios
-title: Esto Es Lo Que Los Equipos de Seguridad **Dicen Sobre Nuestro Red Team con IA**
+enable: true
+subtitle: Notas de campo
+title: Lo que nos cuentan **después de correr pruebas**
 
 marquee:
   element_width: "29.25rem"
   element_width_auto: false
   element_width_in_small_devices: "23rem"
   pause_on_hover: true
-  reverse: "" # reverse / ""
+  reverse: ""
   duration: "50s"
 
 list:
   - enable: true
     content: |
-      La plataforma autónoma de Red Team con IA transformó completamente nuestra postura de seguridad. Ahora identificamos y remediamos vulnerabilidades 10 veces más rápido que los métodos tradicionales, con mínimos falsos positivos que interrumpan nuestras operaciones.
+      Esperábamos el pentest trimestral para saber si un cambio era seguro. Nubesti corre los mismos playbooks cada semana, así que cerramos hallazgos mientras el código sigue en el sprint.
     customer:
-      image: "/images/customers/avatar/1.jpg"
       name: "Carlos Rodriguez"
       role: "CISO en Tecnoayudas"
   - enable: true
     content: |
-      Nuestro equipo de seguridad estaba abrumado con las pruebas manuales hasta que implementamos esta solución con IA. La integración del framework MITRE ATT&CK proporciona una cobertura integral que nunca habíamos tenido antes.
+      Mapear cobertura a mano contra MITRE ATT&CK nos tomaba días y aún dejaba huecos. Los agentes recorren las tácticas que nos importan y en el informe se ve qué técnicas no dispararon.
     customer:
-      image: "/images/customers/avatar/2.jpg"
       name: "Miguel Santos"
       role: "Director de Seguridad en Escala"
   - enable: true
     content: |
-      Las capacidades de pruebas de seguridad continuas nos han dado confianza en nuestra infraestructura. Detectamos vulnerabilidades críticas antes de que se conviertan en incidentes, ahorrándonos millones en costos potenciales de brechas.
+      En hosting el cliente nota el downtime. Primero probamos en staging y luego un alcance fino en producción. Lo útil es pillar un origin mal configurado antes del deploy del viernes.
     customer:
-      image: "/images/customers/avatar/3.jpg"
       name: "Luis Martinez"
       role: "Director de Seguridad en Hostiva"
   - enable: true
     content: |
-      Lo que más nos impresionó es la función de auto-remediación. El agente de IA no solo encuentra vulnerabilidades sino que proporciona parches inmediatos, reduciendo nuestro tiempo de respuesta de semanas a horas.
+      Los pull requests que sugiere la IA son un punto de partida, no un milagro. Aun así, pasar de un hallazgo a un parche revisable la misma tarde es más rápido que abrir tickets a mano.
     customer:
-      image: "/images/customers/avatar/4.jpg"
       name: "Antonio Garcia"
       role: "CTO en Inspira Hosting"
   - enable: true
     content: |
-      La cobertura de OWASP Top 10 es excepcional. Hemos fortalecido significativamente la seguridad de nuestras aplicaciones web, y los informes detallados nos ayudan a demostrar cumplimiento a nuestros clientes.
+      Los clientes piden evidencia OWASP Top 10 en cada paquete de auditoría. Ahora exportamos el último ciclo y lo adjuntamos. Menos diapositivas, más hallazgos con fecha que se pueden leer.
     customer:
-      image: "/images/customers/avatar/5.jpg"
       name: "Roberto Silva"
       role: "Líder de Seguridad en Tecnoayudas"
   - enable: true
     content: |
-      Antes de esta plataforma, luchábamos con evaluaciones de seguridad inconsistentes. Ahora tenemos capacidades de red team de nivel empresarial funcionando 24/7, protegiendo toda nuestra infraestructura digital.
+      Antes cada evaluación dependía de quién estaba de turno. El mismo alcance ahora produce un informe comparable, que es lo que operaciones necesitaba para ver si de verdad mejoramos.
     customer:
-      image: "/images/customers/avatar/6.jpg"
       name: "Sebastian Herrera"
       role: "VP de Operaciones en Escala"
   - enable: true
     content: |
-      La precisión quirúrgica de la detección de vulnerabilidades eliminó el ruido de nuestras alertas de seguridad. Nuestro equipo ahora se enfoca en amenazas reales en lugar de perseguir falsas alarmas todo el día.
+      Nos ahogaba el ruido de los scanners. Nubesti a veces sigue sobre-reportando, pero el Risk Index y la evidencia dejan claro qué vale una ventana de cambio.
     customer:
-      image: "/images/customers/avatar/1.jpg"
       name: "Diego Morales"
       role: "Arquitecto de Seguridad en Hostiva"
   - enable: true
     content: |
-      Esta solución de Red Team con IA escaló nuestras capacidades de seguridad sin expandir nuestro equipo. Estamos protegiendo más activos con menos recursos mientras mantenemos los más altos estándares de seguridad.
+      No contratamos dos pentesters más. Apuntamos los agentes a más propiedades y las mismas dos personas siguen revisando alcance, parando pruebas y decidiendo qué parchear.
     customer:
-      image: "/images/customers/avatar/2.jpg"
       name: "Carlos Lopez"
       role: "Gerente de Seguridad en Inspira Hosting"
 ---

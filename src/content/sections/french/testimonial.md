@@ -1,71 +1,63 @@
 ---
-enable: true # Control the visibility of this section across all pages where it is used
-subtitle: TÃmoignages
-title: Voici ce que les gens disent de **Upstart**
+enable: true
+subtitle: Notes de terrain
+title: Ce que les équipes nous disent **après les tests**
 
 marquee:
   element_width: "29.25rem"
   element_width_auto: false
   element_width_in_small_devices: "23rem"
   pause_on_hover: true
-  reverse: "" # reverse / ""
+  reverse: ""
   duration: "50s"
 
 list:
   - enable: true
     content: |
-      L'outil d'analyse a Ã©tÃ  un jeu-changer pour notre Ã©quipe. Nous avons maintenant des informations en temps rÃel sur le comportement des utilisateurs, les sources de trafic et les mÃtriques d'engagement, ce qui nous permet d'optimiser notre site web de maniÃ¨re efficace.
+      On attendait le pentest trimestriel pour savoir si un changement était sûr. Nubesti rejoue les mêmes playbooks chaque semaine, donc on ferme les constats pendant que le code est encore dans le sprint.
     customer:
-      image: "/images/customers/avatar/1.jpg"
-      name: "James Wilson"
-      role: "CEO"
+      name: "Carlos Rodriguez"
+      role: "CISO chez Tecnoayudas"
   - enable: true
     content: |
-      Votre plateforme d'analyse nous a fourni des donnÃes claires et actionnables sur nos visiteurs. Nous avons amÃliorÃ  nos taux de conversion de 30% grÃ¢ce au suivi dÃtaillÃ  du trafic et des ÃvÃnements.
+      Cartographier la couverture MITRE ATT&CK à la main prenait des jours et laissait des trous. Les agents parcourent les tactiques qui nous importent et le rapport montre quelles techniques n’ont pas tiré.
     customer:
-      image: "/images/customers/avatar/2.jpg"
-      name: "David Lee"
-      role: "VP of Operations"
+      name: "Miguel Santos"
+      role: "Responsable sécurité chez Escala"
   - enable: true
     content: |
-      L'outil d'analyse respectueux de la vie privÃe nous a permis de suivre les mÃtriques clÃs de notre site web sans compromettre les donnÃes des utilisateurs. L'interface claire et les rapports faciles Ã  lire ont rendu l'analyse des donnÃes aisÃe.
+      En hébergement, le client voit la moindre coupure. On teste d’abord en staging, puis un périmètre mince en production. L’intérêt, c’est d’attraper un origin mal configuré avant le déploiement du vendredi.
     customer:
-      image: "/images/customers/avatar/3.jpg"
-      name: "Michael Thompson"
-      role: "CEO"
+      name: "Luis Martinez"
+      role: "Directeur sécurité chez Hostiva"
   - enable: true
     content: |
-      GrÃ¢ce Ã  votre solution d'analyse, nous comprenons maintenant mieux notre public que jamais. Le tableau de bord en temps rÃel et le suivi des ÃvÃnements personnalisÃs nous ont aidÃs Ã  cibler nos stratÃgie de marketing pour un impact maximal.
+      Les pull requests proposées par l’IA sont un point de départ, pas un miracle. Mais passer d’un constat à un correctif relisable le jour même reste plus vite que d’ouvrir des tickets à la main.
     customer:
-      image: "/images/customers/avatar/4.jpg"
-      name: "Sarah Jones"
-      role: "Head of Engineering"
+      name: "Antonio Garcia"
+      role: "CTO chez Inspira Hosting"
   - enable: true
     content: |
-      L'outil d'analyse lÃger nous a fourni des informations approfondies sans ralentir notre site web. Nous avons pu identifier le contenu le plus performant et raffiner notre stratÃgie SEO de maniÃ¨re efficace.
+      Nos clients demandent une preuve OWASP Top 10 dans chaque dossier d’audit. On exporte le dernier cycle et on le joint. Moins de slides, plus de constats datés qu’on peut lire.
     customer:
-      image: "/images/customers/avatar/5.jpg"
-      name: "James Wilson"
-      role: "CEO"
+      name: "Roberto Silva"
+      role: "Lead sécurité chez Tecnoayudas"
   - enable: true
     content: |
-      Avant d'utiliser votre outil d'analyse, nous avions peu de visibilitÃ  sur les performances de notre site web. Maintenant, nous suivons les tendances des visiteurs, l'engagement des utilisateurs et les conversions avec facilitÃ.
+      Avant, chaque évaluation dépendait de qui était d’astreinte. Le même périmètre produit maintenant un rapport comparable, ce dont les ops avaient besoin pour voir si on progressait vraiment.
     customer:
-      image: "/images/customers/avatar/6.jpg"
-      name: "David Lee"
-      role: "VP of Operations"
+      name: "Sebastian Herrera"
+      role: "VP opérations chez Escala"
   - enable: true
     content: |
-      Votre outil d'analyse respectueux de la vie privÃe nous a donnÃ  la confiance de suivre les mÃtriques essentielles de notre entreprise sans avoir recours Ã  des mÃthodes de suivi invasives. C'est l'alternative parfaite aux fournisseurs d'analyse traditionnels.
+      On se noyait dans le bruit des scanners. Nubesti survend encore parfois, mais le Risk Index et les preuves montrent clairement ce qui mérite une fenêtre de changement.
     customer:
-      image: "/images/customers/avatar/1.jpg"
-      name: "Michael Thompson"
-      role: "CEO"
+      name: "Diego Morales"
+      role: "Architecte sécurité chez Hostiva"
   - enable: true
     content: |
-      La capacitÃ  de configurer des ÃvÃnements personnalisÃs et de suivre les actions clÃs des utilisateurs a transformÃ  la maniÃ¨re dont nous analysons les donnÃes. Nous prenons maintenant des dÃcisions ÃclairÃes basÃes sur le comportement rÃel des utilisateurs, et non plus sur des hypothÃ¨ses.
+      On n’a pas embauché deux pentesters de plus. On a pointé les agents vers plus de propriétés, et les deux mêmes personnes valident le périmètre, stoppent les tests et choisissent quoi corriger.
     customer:
-      image: "/images/customers/avatar/2.jpg"
-      name: "Sarah Jones"
-      role: "Head of Engineering"
+      name: "Carlos Lopez"
+      role: "Manager sécurité chez Inspira Hosting"
 ---
